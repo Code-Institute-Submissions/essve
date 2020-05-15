@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+/* NAVBAR */
+/* Navigationbar and its styling */
+.navbar {
+    margin-bottom: 0;
+    width: 100%;
+    background-color: #000000de;
+    border: 0;
+}
+
+.navbar .navbar-toggler {
+    border: 0;
+}
+
+.navbar .navbar-nav a {
+    font-weight: bold;
+    width: 200px;
+    text-align: center;
+}
+
+.fixed-top a {
+    width: 50%;
+    height: 50%;
+    margin-right: 0px;
+}
+
+.ml-auto {
+    margin-left: 0!important;
+}
+
+.logo-header {
+    margin: -14px;
+    width: 6rem;
+    padding-left: 15px;
+}
+
+.social-icon{
+    min-width: 115px;
+}
+
+.social-icon span{
+    font-size: 20px;
+    margin-left: 10px;
+    color: rgb(70, 185, 46);
+}
+
+.social-icon span:hover{
+    color: rgb(9, 77, 9);
+    cursor: pointer;
+}
+
+.btn{
+    padding: 0;
+    vertical-align: inherit;
+}
+/* NAVBAR END */
+
+/* PAGE BODY */
+html,body{
+    background: url('../images/background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+}
+
+.container-fluid {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 40px;
+}
+
+/* PAGE BODY END*/
+
+/* MODAL */
+.modal-color{
+    color: #000000;
+}
+div .modal-header{
+    display: block!important;
+}
+.modal-content{
+    min-height: 80vh;
+}
+
+table{
+    margin: 0px 50px;
+    margin-top: 20px;
+}
+
+/* JUMBOTRON */
+.jumbotron {
+    background-color: white;
+    height: 90vh;
+}
+
+@media(max-width: 768px) {
+    .jumbotron {
+        padding: 4rem 2rem;
+    }
+}
+
+/* MEDIA */
+/* aligns navitems to the right */
+@media (min-width: 991px) {
+    .navbar-expand-lg .navbar-collapse {
+        flex-direction: row-reverse;
+    }
+    .mr-auto, .mx-auto {
+        margin-right: 10px!important;
+    }
+}
+
+@media(max-width: 991px) {
+    .margin-adjust {
+        margin-top: 14px;
+    }
+    .nav-item a{
+        text-align: left!important;
+    }
+}
+/* MEDIA END*/

@@ -22,6 +22,7 @@ if (!isset($_SESSION['loggedin'])) {
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
 		type="text/css">
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="assets/css/home.css" type="text/css" />
 </head>
 
 <body>
@@ -43,7 +44,7 @@ if (!isset($_SESSION['loggedin'])) {
 			        <li class="nav-item mr-2 nav-link social-icon">
 						<span><i class="fa fa-list-alt"></i></span>
 						
-						<button type="button" class="btn btn-link" data-toggle="modal" data-target="#hemfixModal">
+						<button type="button" class="btn btn-link" data-toggle="modal" data-target="#profileModal">
                             <span><i class="fa fa-user-circle-o"></i></span>
 						</button>
 
@@ -53,14 +54,14 @@ if (!isset($_SESSION['loggedin'])) {
 			</div>
 		</nav>
 
-		<div class="modal" id="hemfixModal" tabindex="-1" role="dialog" aria-labelledby="hemfixModalLabel" aria-hidden="true">
+		<div class="modal" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-						<h2 class="text-center" id="hemfixModalLabel">Profile Page</h2>
+						<h2 class="text-center" id="profileModalLabel">Profile Page</h2>
 						<p class="text-center">Your account details are below:</p>
 					</div>
 					<div class="modal-body">
@@ -90,12 +91,176 @@ if (!isset($_SESSION['loggedin'])) {
 				<section class="callout jumbotron">
 					<h2 class="text-center">Home</h2>
 					<p class="text-center">Populära artiklar:</p>
-					<div class="text-center">
-						<p>Lorem Ipsum</p>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3">
+								<figure class="card card-product">
+									<button type="button" id="style-modal" data-toggle="modal" data-target="#essconModal">
+										<div class="img-wrap"><img src="assets/images/ESS-Con.jpg"></div>
+										<figcaption class="info-wrap">
+											<h4 class="title">ESS-CON Broschyr</h4>
+											<p class="desc">Some small description goes here</p>
+										</figcaption>
+										<div class="rating-wrap">
+											<div class="label-rating">154 views </div>
+										</div> <!-- rating-wrap.// -->
+									</button>
+									<div class="bottom-wrap">
+										<a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
+										<div class="">
+											<form action="">
+												<input max="99" min="1" name="antal" type="number" value="1"/>
+											</form>
+										</div>
+									</div> <!-- bottom-wrap.// -->
+								</figure>
+							</div> <!-- col // -->
+		
+							<div class="col-md-3">
+								<figure class="card card-product">
+									<button type="button" id="style-modal" data-toggle="modal" data-target="#kvinfastModal">
+										<div class="img-wrap"><img src="assets/images/kvalificierad_infastning.jpg"> </div>
+										<figcaption class="info-wrap">
+											<h4 class="title">Kvalificierad infästning Broschyr</h4>
+											<p class="desc">Some small description goes here</p>
+										</figcaption>
+										<div class="rating-wrap">
+											<div class="label-rating">154 views </div>
+										</div> <!-- rating-wrap.// -->
+									</button>
+									<div class="bottom-wrap">
+										<a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
+										<div class="">
+											<form action="">
+												<input max="99" min="1" name="antal" type="number" value="1"/>
+											</form>
+										</div>
+									</div> <!-- bottom-wrap.// -->
+								</figure>
+							</div> <!-- col // -->
+
+							<div class="col-md-3">
+								<figure class="card card-product">
+									<button type="button" id="style-modal" data-toggle="modal" data-target="#tungInfastModal">
+										<div class="img-wrap"><img src="assets/images/tung_infastning.jpg"></div>
+										<figcaption class="info-wrap">
+											<h4 class="title">Tung Infästning Broschyr</h4>
+											<p class="desc">Some small description goes here</p>
+										</figcaption>
+										<div class="rating-wrap">
+											<div class="label-rating">154 views </div>
+										</div> <!-- rating-wrap.// -->
+									</button>
+									<div class="bottom-wrap">
+										<a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
+										<div class="">
+											<form action="">
+												<input max="99" min="1" name="antal" type="number" value="1"/>
+											</form>
+										</div>
+									</div> <!-- bottom-wrap.// -->
+								</figure>
+							</div> <!-- col // -->
+
+							<div class="col-md-3">
+								<figure class="card card-product">
+									<button type="button" id="style-modal" data-toggle="modal" data-target="#sortEttModal">
+										<div class="img-wrap"><img src="assets/images/nytt-sortiment-del1.jpg"></div>
+										<figcaption class="info-wrap">
+											<h4 class="title">Lim & Fog Guide del 1</h4>
+											<p class="desc">Some small description goes here</p>
+										</figcaption>
+										<div class="rating-wrap">
+											<div class="label-rating">154 views </div>
+										</div> <!-- rating-wrap.// -->
+									</button>
+									<div class="bottom-wrap">
+										<a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
+										<div class="">
+											<form action="">
+												<input max="99" min="1" name="antal" type="number" value="1"/>
+											</form>
+										</div>
+									</div> <!-- bottom-wrap.// -->
+								</figure>
+							</div> <!-- col // -->
+						</div> <!-- row.// -->
 					</div>
 				</section>
 			</div>
 		</div>
+
+		<div class="modal" id="essconModal" tabindex="-1" role="dialog" aria-labelledby="essconModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+						<h2 id="essconModalLabel">ESSCON Broschyr</h2>
+					</div>
+					<div class="modal-body">
+						<h1 id="essconModalLabel">Info:</h2>
+						<p>Lorem Ipsum</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="modal" id="kvinfastModal" tabindex="-1" role="dialog" aria-labelledby="kvinfastModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+						<h2 id="kvinfastModalLabel">Kvalificierad Infästning Broschyr</h2>
+					</div>
+					<div class="modal-body">
+						<h1 id="kvinfastModalLabel">Info:</h2>
+						<p>Lorem Ipsum</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="modal" id="tungInfastModal" tabindex="-1" role="dialog" aria-labelledby="tungInfastModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+						<h2 id="tungInfastModalLabel">Tung Infästning Broschyr</h2>
+					</div>
+					<div class="modal-body">
+						<h1 id="tungInfastModalLabel">Info:</h2>
+						<p>Lorem Ipsum</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="modal" id="sortEttModal" tabindex="-1" role="dialog" aria-labelledby="sortEttModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+						<h2 id="sortEttModalLabel">Lim & Fog Sortimentsguide del 1</h2>
+					</div>
+					<div class="modal-body">
+						<h1 id="sortEttModalLabel">Info:</h2>
+						<p>Lorem Ipsum</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </body>
 

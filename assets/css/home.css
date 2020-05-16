@@ -56,3 +56,7 @@
     background-color: #fafafa!important;
     border: 1px solid transparent;
 }
+
+button:focus {
+    outline: 0px solid -webkit-focus-ring-color;
+}

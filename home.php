@@ -22,7 +22,8 @@ if (!isset($_SESSION['loggedin'])) {
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
 		type="text/css">
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-	<link rel="stylesheet" href="assets/css/home.css" type="text/css" />
+	<link rel="stylesheet" href="assets/css/product-overview.css" type="text/css" />
+	<script type="text/javascript" src="assets/js/nav.js"></script>
 </head>
 
 <body>
@@ -30,7 +31,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 	    <nav class="navbar fixed-top navbar-dark navbar-expand-lg">
 	    	<a href="home.php" class="navbar-brand" target="_self">
-				<img src="assets/images/essve-logo.jpg" class="img-fluid logo-header" alt="Webpage Logo - responsive image">
+				<img src="assets/images/essve-logo.jpg" class="img-fluid logo-header" alt="Webpage Logo - responsive image" href="home.php">
             </a>
 
 	    	<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,10 +39,22 @@ if (!isset($_SESSION['loggedin'])) {
 
 	    	<div class="navbar-collapse collapse" id="navbarNavDropdown">
 				<ul class="navbar-nav mr-auto">
-    				<li class="nav-item mr-2"><a class="nav-link margin-adjust" href="inredning.html">Inredning</a></li>
-	    			<li class="nav-item mr-2"><a class="nav-link" href="marknadsmatr.html">Marknadsmaterial</a></li>
-					<li class="nav-item mr-2"><a class="nav-link" href="giveaway.html">Give away</a></li>
+    				<li class="nav-item mr-1"><a class="nav-link" href="home.php">Hem</a></li>
+					<li class="nav-item mr-2 dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Kategorier
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="inredning.html">Inredning</a>
+							<a class="dropdown-item" href="marknadsmatr.html">Marknadsmaterial</a>
+							<a class="dropdown-item" href="giveaway.html">Give away</a>
+							<a class="dropdown-item" href="kataloger.html">Kataloger/Broschyrer</a>
+						</div>
+					</li>
+					<li class="icons"></span>
 			        <li class="nav-item mr-2 nav-link social-icon">
+						<span id="icons" onmouseleave="backToNormal()"><i class="fa fa-search" id="iconified" onmouseenter="searchBar()"></i></span>
 						<span><i class="fa fa-list-alt"></i></span>
 						
 						<button type="button" class="btn btn-link" data-toggle="modal" data-target="#profileModal">
@@ -96,7 +109,7 @@ if (!isset($_SESSION['loggedin'])) {
 							<div class="col-md-3">
 								<figure class="card card-product">
 									<button type="button" id="style-modal" data-toggle="modal" data-target="#essconModal">
-										<div class="img-wrap"><img src="assets/images/ESS-Con.jpg"></div>
+										<div class="img-wrap"><img src="assets/images/products/ESS-Con.jpg"></div>
 										<figcaption class="info-wrap">
 											<h4 class="title">ESS-CON Broschyr</h4>
 											<p class="desc">Some small description goes here</p>
@@ -119,7 +132,7 @@ if (!isset($_SESSION['loggedin'])) {
 							<div class="col-md-3">
 								<figure class="card card-product">
 									<button type="button" id="style-modal" data-toggle="modal" data-target="#kvinfastModal">
-										<div class="img-wrap"><img src="assets/images/kvalificierad_infastning.jpg"> </div>
+										<div class="img-wrap"><img src="assets/images/products/kvalificierad_infastning.jpg"> </div>
 										<figcaption class="info-wrap">
 											<h4 class="title">Kvalificierad infästning Broschyr</h4>
 											<p class="desc">Some small description goes here</p>
@@ -142,7 +155,7 @@ if (!isset($_SESSION['loggedin'])) {
 							<div class="col-md-3">
 								<figure class="card card-product">
 									<button type="button" id="style-modal" data-toggle="modal" data-target="#tungInfastModal">
-										<div class="img-wrap"><img src="assets/images/tung_infastning.jpg"></div>
+										<div class="img-wrap"><img src="assets/images/products/tung_infastning.jpg"></div>
 										<figcaption class="info-wrap">
 											<h4 class="title">Tung Infästning Broschyr</h4>
 											<p class="desc">Some small description goes here</p>
@@ -165,7 +178,7 @@ if (!isset($_SESSION['loggedin'])) {
 							<div class="col-md-3">
 								<figure class="card card-product">
 									<button type="button" id="style-modal" data-toggle="modal" data-target="#sortEttModal">
-										<div class="img-wrap"><img src="assets/images/nytt-sortiment-del1.jpg"></div>
+										<div class="img-wrap"><img src="assets/images/products/nytt-sortiment-del1.jpg"></div>
 										<figcaption class="info-wrap">
 											<h4 class="title">Lim & Fog Guide del 1</h4>
 											<p class="desc">Some small description goes here</p>
@@ -190,77 +203,37 @@ if (!isset($_SESSION['loggedin'])) {
 			</div>
 		</div>
 
-		<div class="modal" id="essconModal" tabindex="-1" role="dialog" aria-labelledby="essconModalLabel" aria-hidden="true">
+		<div class="modal" id="essconModal" tabindex="-1" role="dialog" aria-labelledby="essconModallabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-						<h2 id="essconModalLabel">ESSCON Broschyr</h2>
-					</div>
-					<div class="modal-body">
-						<h1 id="essconModalLabel">Info:</h2>
-						<p>Lorem Ipsum</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
+      			<div class="modal-content">
+				  <iframe src="product-one.html" class="product-info" title="product-information"></iframe>
+      			</div>
+    		</div>
+		  </div>
+		  
 		<div class="modal" id="kvinfastModal" tabindex="-1" role="dialog" aria-labelledby="kvinfastModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-						<h2 id="kvinfastModalLabel">Kvalificierad Infästning Broschyr</h2>
-					</div>
-					<div class="modal-body">
-						<h1 id="kvinfastModalLabel">Info:</h2>
-						<p>Lorem Ipsum</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
+      			<div class="modal-content">
+				  <iframe src="product-two.html" class="product-info" title="product-information"></iframe>
+      			</div>
+    		</div>
+		  </div>
+		  
 		<div class="modal" id="tungInfastModal" tabindex="-1" role="dialog" aria-labelledby="tungInfastModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-						<h2 id="tungInfastModalLabel">Tung Infästning Broschyr</h2>
-					</div>
-					<div class="modal-body">
-						<h1 id="tungInfastModalLabel">Info:</h2>
-						<p>Lorem Ipsum</p>
-					</div>
-				</div>
-			</div>
+      			<div class="modal-content">
+				  <iframe src="product-three.html" class="product-info" title="product-information"></iframe>
+      			</div>
+    		</div>
 		</div>
-
-
+		
 		<div class="modal" id="sortEttModal" tabindex="-1" role="dialog" aria-labelledby="sortEttModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-						<h2 id="sortEttModalLabel">Lim & Fog Sortimentsguide del 1</h2>
-					</div>
-					<div class="modal-body">
-						<h1 id="sortEttModalLabel">Info:</h2>
-						<p>Lorem Ipsum</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
+      			<div class="modal-content">
+				  <iframe src="product-four.html" class="product-info" title="product-information"></iframe>
+      			</div>
+    		</div>
+  		</div>
 	</div>
 </body>
 

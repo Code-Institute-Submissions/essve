@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
 		type="text/css">
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="assets/css/product-overview.css" type="text/css" />
+	<script type="text/javascript" src="assets/js/nav.js"></script>
 </head>
 
 <body>
@@ -19,7 +21,7 @@
 
 	    <nav class="navbar fixed-top navbar-dark navbar-expand-lg">
 	    	<a href="home.php" class="navbar-brand" target="_self">
-				<img src="assets/images/essve-logo.jpg" class="img-fluid logo-header" alt="Webpage Logo - responsive image">
+				<img src="assets/images/essve-logo.jpg" class="img-fluid logo-header" alt="Webpage Logo - responsive image" href="home.php">
             </a>
 
 	    	<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,10 +29,22 @@
 
 	    	<div class="navbar-collapse collapse" id="navbarNavDropdown">
 				<ul class="navbar-nav mr-auto">
-    				<li class="nav-item mr-2"><a class="nav-link margin-adjust active" href="inredning.html">Inredning</a></li>
-	    			<li class="nav-item mr-2"><a class="nav-link" href="marknadsmatr.html">Marknadsmaterial</a></li>
-					<li class="nav-item mr-2"><a class="nav-link" href="giveaway.html">Give away</a></li>
+    				<li class="nav-item mr-1"><a class="nav-link" href="home.php">Hem</a></li>
+					<li class="nav-item mr-2 dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Kategorier
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="inredning.html">Inredning</a>
+							<a class="dropdown-item" href="marknadsmatr.html">Marknadsmaterial</a>
+							<a class="dropdown-item" href="giveaway.html">Give away</a>
+							<a class="dropdown-item" href="kataloger.html">Kataloger/Broschyrer</a>
+						</div>
+					</li>
+					<li class="icons"></span>
 			        <li class="nav-item mr-2 nav-link social-icon">
+						<span id="icons" onmouseleave="backToNormal()"><i class="fa fa-search" id="iconified" onmouseenter="searchBar()"></i></span>
 						<span><i class="fa fa-list-alt"></i></span>
 						
 						<button type="button" class="btn btn-link" data-toggle="modal" data-target="#profileModal">
@@ -80,12 +94,136 @@
 				<section class="callout jumbotron">
 					<h2 class="text-center">Inredning</h2>
 					<p class="text-center">Populära artiklar:</p>
-					<div class="text-center">
-						<p>Lorem Ipsum</p>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3">
+								<figure class="card card-product">
+									<button type="button" id="style-modal" data-toggle="modal" data-target="#dyckertModal">
+										<div class="img-wrap"><img src="assets/images/products/dyckertpistolhållare.jpg"></div>
+										<figcaption class="info-wrap">
+											<h4 class="title">dyckertpistolhållare</h4>
+											<p class="desc">Some small description goes here</p>
+										</figcaption>
+										<div class="rating-wrap">
+											<div class="label-rating">154 views </div>
+										</div> <!-- rating-wrap.// -->
+									</button>
+									<div class="bottom-wrap">
+										<a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
+										<div class="">
+											<form action="">
+												<input max="99" min="1" name="antal" type="number" value="1"/>
+											</form>
+										</div>
+									</div> <!-- bottom-wrap.// -->
+								</figure>
+							</div> <!-- col // -->
+		
+							<div class="col-md-3">
+								<figure class="card card-product">
+									<button type="button" id="style-modal" data-toggle="modal" data-target="#kvinfastModal">
+										<div class="img-wrap"><img src="assets/images/kvalificierad_infastning.jpg"> </div>
+										<figcaption class="info-wrap">
+											<h4 class="title">Kvalificierad infästning Broschyr</h4>
+											<p class="desc">Some small description goes here</p>
+										</figcaption>
+										<div class="rating-wrap">
+											<div class="label-rating">154 views </div>
+										</div> <!-- rating-wrap.// -->
+									</button>
+									<div class="bottom-wrap">
+										<a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
+										<div class="">
+											<form action="">
+												<input max="99" min="1" name="antal" type="number" value="1"/>
+											</form>
+										</div>
+									</div> <!-- bottom-wrap.// -->
+								</figure>
+							</div> <!-- col // -->
+
+							<div class="col-md-3">
+								<figure class="card card-product">
+									<button type="button" id="style-modal" data-toggle="modal" data-target="#tungInfastModal">
+										<div class="img-wrap"><img src="assets/images/tung_infastning.jpg"></div>
+										<figcaption class="info-wrap">
+											<h4 class="title">Tung Infästning Broschyr</h4>
+											<p class="desc">Some small description goes here</p>
+										</figcaption>
+										<div class="rating-wrap">
+											<div class="label-rating">154 views </div>
+										</div> <!-- rating-wrap.// -->
+									</button>
+									<div class="bottom-wrap">
+										<a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
+										<div class="">
+											<form action="">
+												<input max="99" min="1" name="antal" type="number" value="1"/>
+											</form>
+										</div>
+									</div> <!-- bottom-wrap.// -->
+								</figure>
+							</div> <!-- col // -->
+
+							<div class="col-md-3">
+								<figure class="card card-product">
+									<button type="button" id="style-modal" data-toggle="modal" data-target="#sortEttModal">
+										<div class="img-wrap"><img src="assets/images/nytt-sortiment-del1.jpg"></div>
+										<figcaption class="info-wrap">
+											<h4 class="title">Lim & Fog Guide del 1</h4>
+											<p class="desc">Some small description goes here</p>
+										</figcaption>
+										<div class="rating-wrap">
+											<div class="label-rating">154 views </div>
+										</div> <!-- rating-wrap.// -->
+									</button>
+									<div class="bottom-wrap">
+										<a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
+										<div class="">
+											<form action="">
+												<input max="99" min="1" name="antal" type="number" value="1"/>
+											</form>
+										</div>
+									</div> <!-- bottom-wrap.// -->
+								</figure>
+							</div> <!-- col // -->
+						</div> <!-- row.// -->
 					</div>
 				</section>
 			</div>
 		</div>
+
+		<div class="modal" id="dyckertModal" tabindex="-1" role="dialog" aria-labelledby="dyckertModallabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      			<div class="modal-content">
+				  <iframe src="product-five.html" class="product-info" title="product-information"></iframe>
+      			</div>
+    		</div>
+		  </div>
+		  
+		<div class="modal" id="kvinfastModal" tabindex="-1" role="dialog" aria-labelledby="kvinfastModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      			<div class="modal-content">
+				  <iframe src="product-two.html" class="product-info" title="product-information"></iframe>
+      			</div>
+    		</div>
+		  </div>
+		  
+		<div class="modal" id="tungInfastModal" tabindex="-1" role="dialog" aria-labelledby="tungInfastModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      			<div class="modal-content">
+				  <iframe src="product-three.html" class="product-info" title="product-information"></iframe>
+      			</div>
+    		</div>
+		</div>
+		
+		<div class="modal" id="sortEttModal" tabindex="-1" role="dialog" aria-labelledby="sortEttModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      			<div class="modal-content">
+				  <iframe src="product-four.html" class="product-info" title="product-information"></iframe>
+      			</div>
+    		</div>
+  		</div>
 	</div>
 </body>
 

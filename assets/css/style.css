@@ -98,6 +98,13 @@ input[type=text] {
     padding: .375rem 1rem;
     max-height: 30px;
 }
+
+.searching::placeholder
+.searching:-ms-input-placeholder
+.searching::-ms-input-placeholder{
+    color: rgba(255, 255, 255, 0.753);
+}
+
 /* NAVBAR END */
 
 /* PAGE BODY */

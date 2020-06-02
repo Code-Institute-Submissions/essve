@@ -84,7 +84,7 @@
 }
 
 /*Search-bar*/
-input[type=text] {
+.searching {
     width: 150px;
     border-radius: 7px;
     -webkit-transition: width 0.4s ease-in-out;
@@ -99,12 +99,28 @@ input[type=text] {
     max-height: 30px;
 }
 
+.main-search{
+    display: inline;
+    border: 1px solid transparent;
+    min-width: 200px;
+}
+
+.main-search{
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+.main-search:focus{
+    width: 80%;
+}
+
 .searching::placeholder
 .searching:-ms-input-placeholder
 .searching::-ms-input-placeholder{
     color: rgba(255, 255, 255, 0.753);
 }
-
 /* NAVBAR END */
 
 /* PAGE BODY */
@@ -149,8 +165,23 @@ table{
 
 /* JUMBOTRON */
 .jumbotron {
+    border-radius: 25px;
+    display: inline-block;
     background-color: white;
     min-height: 90vh;
+    width: 150vh;
+}
+
+.container-fluid{
+    text-align: center;
+}
+
+.search-jumbo{
+    background-color: rgb(10, 10,10, 0.5);
+    color: #fafafa;
+    min-height: 30vh;
+    margin-bottom: 0rem;
+    margin-top: 1rem;
 }
 
 @media(max-width: 768px) {

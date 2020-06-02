@@ -97,6 +97,17 @@ if (!isset($_SESSION['loggedin'])) {
 		</div>
 	</header>
 
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<section class="jumbotron search-jumbo text-center">
+					<p class="lead">Navigera med menyknapparna ovan, eller sök efter din produkt här:</p>
+                    <input type="text" name="search" class="form-control main-search" placeholder="Sök.."></input>
+				</section>
+			</div>
+		</div>
+	</div>
+    
 	<div class="container-fluid callout-container">
 		<div class="row">
 			<div class="col-12">

@@ -1,6 +1,6 @@
 function searchBar(){
     $("#iconified").hide();
-    $("#icons").html(`<input type="text" name="search" class="form-control" placeholder="Sök.."></input>`);
+    $("#icons").html(`<input type="text" name="search" class="form-control searching" placeholder="Sök.."></input>`);
 };
 
 function backToNormal(){

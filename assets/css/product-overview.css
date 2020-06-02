@@ -60,3 +60,11 @@
 button:focus {
     outline: 0px solid -webkit-focus-ring-color;
 }
+
+.search-jumbo{
+    background-color: rgb(10, 10,10, 0.5);
+    color: #fafafa;
+    min-height: 30vh;
+    margin-bottom: 10rem;
+    margin-top: 1rem;
+}

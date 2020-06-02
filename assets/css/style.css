@@ -2,6 +2,10 @@
 
 /* NAVBAR */
 /* Navigationbar and its styling */
+.header{
+    padding-top: 0px!important;
+}
+
 .navbar {
     margin-bottom: 0;
     width: 100%;
@@ -99,6 +103,11 @@
     max-height: 30px;
 }
 
+.searching:focus{
+    background-color: #000000de;
+    border-color: rgb(70, 185, 46);
+}
+
 .main-search{
     display: inline;
     border: 1px solid transparent;
@@ -174,14 +183,6 @@ table{
 
 .container-fluid{
     text-align: center;
-}
-
-.search-jumbo{
-    background-color: rgb(10, 10,10, 0.5);
-    color: #fafafa;
-    min-height: 30vh;
-    margin-bottom: 0rem;
-    margin-top: 1rem;
 }
 
 @media(max-width: 768px) {

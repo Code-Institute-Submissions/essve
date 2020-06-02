@@ -27,7 +27,7 @@ if (!isset($_SESSION['loggedin'])) {
 </head>
 
 <body>
-	<header class="container-fluid">
+	<header class="container-fluid header">
 
 	    <nav class="navbar fixed-top navbar-dark navbar-expand-lg">
 	    	<a href="home.php" class="navbar-brand" target="_self">
@@ -97,17 +97,39 @@ if (!isset($_SESSION['loggedin'])) {
 		</div>
 	</header>
 
-    <div class="container-fluid">
-		<div class="row">
-			<div class="col-12">
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  		<ol class="carousel-indicators">
+    		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  		</ol>
+  		<div class="carousel-inner">
+    		<div class="carousel-item active">
+				<img class="d-block w-100" src="assets/images/slider/space4.jpg" alt="First slide">
+    		</div>
+    		<div class="carousel-item">
+      			<img class="d-block w-100" src="assets/images/slider/space3.jpg" alt="Second slide">
+    		</div>
+    		<div class="carousel-item">
+      			<img class="d-block w-100" src="assets/images/slider/space5.jpg" alt="Third slide">
+			</div>
+			<div class="carousel-caption">
 				<section class="jumbotron search-jumbo text-center">
 					<p class="lead">Navigera med menyknapparna ovan, eller sök efter din produkt här:</p>
-                    <input type="text" name="search" class="form-control main-search" placeholder="Sök.."></input>
+                	<input type="text" name="search" class="form-control main-search" placeholder="Sök.."></input>
 				</section>
 			</div>
-		</div>
+  		</div>
+  		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    		<span class="sr-only">Previous</span>
+ 		</a>
+  		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    		<span class="sr-only">Next</span>
+  		</a>
 	</div>
-    
+    <!--
 	<div class="container-fluid callout-container">
 		<div class="row">
 			<div class="col-12">
@@ -126,7 +148,7 @@ if (!isset($_SESSION['loggedin'])) {
 										</figcaption>
 										<div class="rating-wrap">
 											<div class="label-rating">154 views </div>
-										</div> <!-- rating-wrap.// -->
+										</div> <!-- rating-wrap.// 
 									</button>
 									<div class="bottom-wrap">
 										<a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
@@ -135,9 +157,9 @@ if (!isset($_SESSION['loggedin'])) {
 												<input max="99" min="1" name="antal" type="number" value="1"/>
 											</form>
 										</div>
-									</div> <!-- bottom-wrap.// -->
+									</div> <!-- bottom-wrap.// 
 								</figure>
-							</div> <!-- col // -->
+							</div> <!-- col // 
 		
 							<div class="col-md-3">
 								<figure class="card card-product">
@@ -149,7 +171,7 @@ if (!isset($_SESSION['loggedin'])) {
 										</figcaption>
 										<div class="rating-wrap">
 											<div class="label-rating">154 views </div>
-										</div> <!-- rating-wrap.// -->
+										</div> <!-- rating-wrap.// 
 									</button>
 									<div class="bottom-wrap">
 										<a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
@@ -158,9 +180,9 @@ if (!isset($_SESSION['loggedin'])) {
 												<input max="99" min="1" name="antal" type="number" value="1"/>
 											</form>
 										</div>
-									</div> <!-- bottom-wrap.// -->
+									</div> <!-- bottom-wrap.//
 								</figure>
-							</div> <!-- col // -->
+							</div> <!-- col //
 
 							<div class="col-md-3">
 								<figure class="card card-product">
@@ -172,7 +194,7 @@ if (!isset($_SESSION['loggedin'])) {
 										</figcaption>
 										<div class="rating-wrap">
 											<div class="label-rating">154 views </div>
-										</div> <!-- rating-wrap.// -->
+										</div> <!-- rating-wrap.//
 									</button>
 									<div class="bottom-wrap">
 										<a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
@@ -181,9 +203,9 @@ if (!isset($_SESSION['loggedin'])) {
 												<input max="99" min="1" name="antal" type="number" value="1"/>
 											</form>
 										</div>
-									</div> <!-- bottom-wrap.// -->
+									</div> <!-- bottom-wrap.//
 								</figure>
-							</div> <!-- col // -->
+							</div> <!-- col //
 
 							<div class="col-md-3">
 								<figure class="card card-product">
@@ -195,7 +217,7 @@ if (!isset($_SESSION['loggedin'])) {
 										</figcaption>
 										<div class="rating-wrap">
 											<div class="label-rating">154 views </div>
-										</div> <!-- rating-wrap.// -->
+										</div> <!-- rating-wrap.//
 									</button>
 									<div class="bottom-wrap">
 										<a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
@@ -204,10 +226,10 @@ if (!isset($_SESSION['loggedin'])) {
 												<input max="99" min="1" name="antal" type="number" value="1"/>
 											</form>
 										</div>
-									</div> <!-- bottom-wrap.// -->
+									</div> <!-- bottom-wrap.//
 								</figure>
-							</div> <!-- col // -->
-						</div> <!-- row.// -->
+							</div> <!-- col //
+						</div> <!-- row.//
 					</div>
 				</section>
 			</div>
@@ -244,7 +266,7 @@ if (!isset($_SESSION['loggedin'])) {
       			</div>
     		</div>
   		</div>
-	</div>
+	</div>-->
 </body>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

@@ -39,8 +39,8 @@ if (!isset($_SESSION['loggedin'])) {
 
 	    	<div class="navbar-collapse collapse" id="navbarNavDropdown">
 				<ul class="navbar-nav mr-auto">
-    				<li class="nav-item mr-1"><a class="nav-link" href="home.php">Hem</a></li>
-					<li class="nav-item mr-2 dropdown">
+    				<li class="nav-item mr-1 margin-top"><a class="nav-link" href="home.php">Hem</a></li>
+					<li class="nav-item mr-2 margin-top dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
 							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Kategorier
@@ -52,7 +52,6 @@ if (!isset($_SESSION['loggedin'])) {
 							<a class="dropdown-item" href="kataloger.html">Kataloger/Broschyrer</a>
 						</div>
 					</li>
-					<li class="icons"></span>
 			        <li class="nav-item mr-2 nav-link social-icon">
 						<span id="icons" onmouseleave="backToNormal()"><i class="fa fa-search" id="iconified" onmouseenter="searchBar()"></i></span>
 						<span><i class="fa fa-list-alt"></i></span>

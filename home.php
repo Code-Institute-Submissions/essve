@@ -39,7 +39,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 	    	<div class="navbar-collapse collapse" id="navbarNavDropdown">
 				<ul class="navbar-nav mr-auto">
-    				<li class="nav-item mr-1 margin-top"><a class="nav-link" href="home.php">Hem</a></li>
+    				<li class="nav-item mr-1 home margin-top"><a class="nav-link" href="home.php">Hem</a></li>
 					<li class="nav-item mr-2 margin-top dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
 							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -105,13 +105,13 @@ if (!isset($_SESSION['loggedin'])) {
   		</ol>
   		<div class="carousel-inner">
     		<div class="carousel-item active">
-				<img class="d-block w-100" src="assets/images/slider/space4.jpg" alt="First slide">
+				<img class="img-fluid d-block w-100" src="assets/images/slider/space4.jpg" alt="First slide">
     		</div>
     		<div class="carousel-item">
-      			<img class="d-block w-100" src="assets/images/slider/space3.jpg" alt="Second slide">
+      			<img class="img-fluid d-block w-100" src="assets/images/slider/space3.jpg" alt="Second slide">
     		</div>
     		<div class="carousel-item">
-      			<img class="d-block w-100" src="assets/images/slider/space5.jpg" alt="Third slide">
+      			<img class="img-fluid d-block w-100" src="assets/images/slider/space5.jpg" alt="Third slide">
 			</div>
 			<div class="carousel-caption">
 				<section class="jumbotron search-jumbo text-center">

@@ -65,6 +65,60 @@ button:focus {
     background-color: rgb(10, 10,10, 0.5);
     color: #fafafa;
     min-height: 30vh;
-    margin-bottom: 10rem;
+    margin-bottom: 25%;
     margin-top: 1rem;
+    width: auto;
 }
+
+.main-search{
+    display: inline;
+    border: 1px solid transparent;
+    min-width: 200px;
+    border-radius: 25rem;
+}
+
+.main-search{
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.carousel-item{
+    height: 100vh!important;
+}
+
+.w-100 {
+    height: 100%!important;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* When the input field gets focus, change its width to 100% */
+.main-search:focus{
+    width: 80%;
+    border-color: rgb(70, 185, 46);
+}
+
+@media(max-width: 991px){
+    .search-jumbo{
+        min-height: 0;
+        width: 100%;
+    }
+    .social-icon{
+        max-width: 140px;
+    }
+}
+
+@media(max-width: 425px){
+    .main-search{
+        width: 80%!important;
+        min-width: 0!important;
+    }
+    .lead{
+        font-size: medium;
+    }
+}
+

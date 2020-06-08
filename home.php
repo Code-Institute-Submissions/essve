@@ -22,7 +22,7 @@ if (!isset($_SESSION['loggedin'])) {
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
 		type="text/css">
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-	<link rel="stylesheet" href="assets/css/product-overview.css" type="text/css" />
+	<link rel="stylesheet" href="assets/css/home.css" type="text/css" />
 	<script type="text/javascript" src="assets/js/nav.js"></script>
 </head>
 
@@ -47,37 +47,37 @@ if (!isset($_SESSION['loggedin'])) {
 							</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
 								<li>
-									<a tabindex="-1" class="dropdown-item" href="inredning.html">inredning</a>
+									<a class="dropdown-item" href="inredning.html">inredning</a>
 								</li>
                                 <li class="dropdown-submenu">
-									<a tabindex="-1" class="dropdown-item" href="marknadsmatr.html">marknadsmaterial</a>
+									<a class="dropdown-item" href="product-overview.html">marknadsmaterial</a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">pallsvep</a></li>
-										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">skyltar</a></li>
-										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">affischer</a></li>
-										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">ställ</a></li>
-										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">övrigt</a></li>
+										<li><a class="dropdown-item" href="product-overview.html">pallsvep</a></li>
+										<li><a class="dropdown-item" href="product-overview.html">skyltar</a></li>
+										<li><a class="dropdown-item" href="product-overview.html">affischer</a></li>
+										<li><a class="dropdown-item" href="product-overview.html">ställ</a></li>
+										<li><a class="dropdown-item" href="product-overview.html">övrigt</a></li>
 									</ul>
 								</li>
                                 <li>
-									<a tabindex="-1" class="dropdown-item" href="forpackning.html">förpackningsmaterial</a>
+									<a class="dropdown-item" href="forpackning.html">förpackningsmaterial</a>
 								</li>
                                 <li class="dropdown-submenu">
-									<a tabindex="-1" class="dropdown-item" href="trycksaker.html">trycksaker</a>
+									<a class="dropdown-item" href="trycksaker.html">trycksaker</a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">kataloger</a></li>
-										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">broschyrer</a></li>
+										<li><a class="dropdown-item" href="product-overview.html">kataloger</a></li>
+										<li><a class="dropdown-item" href="product-overview.html">broschyrer</a></li>
 									</ul>
 								</li>
                                 <li class="dropdown-submenu">
-									<a tabindex="-1" class="dropdown-item" href="giveaway.html">give-away</a>
+									<a class="dropdown-item" href="giveaway.html">give-away</a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">kläder</a></li>
-										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">övrigt</a></li>
+										<li><a class="dropdown-item" href="product-overview.html">kläder</a></li>
+										<li><a class="dropdown-item" href="product-overview.html">övrigt</a></li>
 									</ul>
 								</li>
                                 <li>
-									<a tabindex="-1" class="dropdown-item" href="ovrigt.html">övrigt</a>
+									<a class="dropdown-item" href="ovrigt.html">övrigt</a>
 								</li>
 							</ul>
 						</li>

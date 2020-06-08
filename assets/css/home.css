@@ -1,0 +1,129 @@
+.card-product .img-wrap {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.card-product .img-wrap img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+.card-product .info-wrap {
+    overflow: hidden;
+    min-height: 200px;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+.card-product .bottom-wrap {
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.label-rating { margin-right:10px;
+    color: #333;
+    display: flex;
+    vertical-align: middle;
+    flex-direction: row-reverse;
+}
+
+.bottom-wrap .btn{
+    padding: 5px;
+    background-color: rgb(70, 185, 46);
+    border: 1px solid transparent;
+}
+
+.bottom-wrap .btn:hover{
+    background-color: rgb(9, 77, 9);
+    cursor: pointer;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: rgb(70, 185, 46);
+    border: 1px solid transparent;
+}
+
+.title{
+    text-align: center;
+}
+
+.desc{
+    margin-top: 1rem;
+}
+
+#style-modal{
+    background-color: #fafafa!important;
+    border: 1px solid transparent;
+}
+
+button:focus {
+    outline: 0px solid -webkit-focus-ring-color;
+}
+
+.search-jumbo{
+    background-color: rgb(10, 10,10, 0.5);
+    color: #fafafa;
+    min-height: 30vh;
+    margin-bottom: 25%;
+    margin-top: 1rem;
+    width: auto;
+}
+
+.main-search{
+    display: inline;
+    border: 1px solid transparent;
+    min-width: 200px;
+    border-radius: 25rem;
+}
+
+.main-search{
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.carousel-item{
+    height: 100vh!important;
+}
+
+.w-100 {
+    height: 100%!important;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-caption{
+    top: 12rem;
+    bottom: auto;
+}
+
+/* When the input field gets focus, change its width to 100% */
+.main-search:focus{
+    width: 80%;
+    border-color: rgb(70, 185, 46);
+}
+
+@media(max-width: 991px){
+    .search-jumbo{
+        min-height: 0;
+        width: 100%;
+    }
+    .social-icon{
+        max-width: 140px;
+    }
+}
+
+@media(max-width: 425px){
+    .main-search{
+        width: 80%!important;
+        min-width: 0!important;
+    }
+    .lead{
+        font-size: medium;
+    }
+}
+

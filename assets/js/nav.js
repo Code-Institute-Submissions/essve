@@ -11,7 +11,8 @@ function backToNormal() {
 
 function myFunction() {
     $(".product-present").html("");
-    $(".product-present").html(`<div class="container padding-top">
+    $(".product-present").html(`
+    <div class="container padding-top">
         <div class="card">
             <div class="row">
                 <aside class="col-sm-5 padding-top">
@@ -19,8 +20,8 @@ function myFunction() {
                         <div class="img-big-wrap">
                             test
                             <div> <a href="#"><img src="../images/products/ESS-Con.jpg"></a></div>
-                        </div> <!-- slider-product.// -->
-                    </article> <!-- gallery-wrap .end// -->
+                        </div>
+                    </article>
                 </aside>
                 <aside class="col-sm-7">
                     <article class="card-body p-5">
@@ -36,15 +37,15 @@ function myFunction() {
                         <dl class="param param-feature">
                             <dt>Artikelnummer</dt>
                             <dd>12345611</dd>
-                        </dl> <!-- item-property-hor .// -->
+                        </dl>
                         <dl class="param param-feature">
                             <dt>antal/frp</dt>
                             <dd>25</dd>
-                        </dl> <!-- item-property-hor .// -->
+                        </dl>
                         <dl class="param param-feature">
                             <dt>Enhetstyp</dt>
                             <dd>PC</dd>
-                        </dl> <!-- item-property-hor .// -->
+                        </dl>
                         <hr>
                         <div>
                             <a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
@@ -58,5 +59,15 @@ function myFunction() {
                 </aside>
             </div>
         </div>
-    </div>`);
+    </div>
+    
+    <div class="modal" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModallabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<iframe src="../../product-one.html" class="product-info" title="product-information"></iframe>
+			</div>
+		</div>
+    </div>`
+    );
 };

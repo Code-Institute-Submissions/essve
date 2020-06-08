@@ -63,7 +63,7 @@ if (!isset($_SESSION['loggedin'])) {
 									<a tabindex="-1" class="dropdown-item" href="forpackning.html">förpackningsmaterial</a>
 								</li>
                                 <li class="dropdown-submenu">
-									<a tabindex="-1" class="dropdown-item" href="kataloger.html">trycksaker</a>
+									<a tabindex="-1" class="dropdown-item" href="trycksaker.html">trycksaker</a>
 									<ul class="dropdown-menu">
 										<li><a class="dropdown-item" tabindex="-1" href="#">kataloger</a></li>
 										<li><a class="dropdown-item" tabindex="-1" href="#">broschyrer</a></li>

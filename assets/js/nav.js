@@ -9,9 +9,9 @@ function backToNormal() {
     $("#iconified").show();
 };
 
-/*
-    $("product-presentation").html(`
-        <div class="container padding-top">
+function myFunction() {
+    $(".product-present").html("");
+    $(".product-present").html(`<div class="container padding-top">
         <div class="card">
             <div class="row">
                 <aside class="col-sm-5 padding-top">
@@ -58,4 +58,5 @@ function backToNormal() {
                 </aside>
             </div>
         </div>
-    </div>`*/
+    </div>`);
+};

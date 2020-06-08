@@ -10,64 +10,144 @@ function backToNormal() {
 };
 
 function myFunction() {
-    $(".product-present").html("");
-    $(".product-present").html(`
-    <div class="container padding-top">
-        <div class="card">
-            <div class="row">
-                <aside class="col-sm-5 padding-top">
-                    <article class="gallery-wrap">
-                        <div class="img-big-wrap">
-                            test
-                            <div> <a href="#"><img src="../images/products/ESS-Con.jpg"></a></div>
-                        </div>
-                    </article>
-                </aside>
-                <aside class="col-sm-7">
-                    <article class="card-body p-5">
-                        <h3 class="title mb-3">ESS-CON Broschyr</h3>
-                        <dl class="item-property">
-                            <dt>Beskrivning</dt>
-                            <dd>
-                                <p>Here goes description consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco </p>
-                            </dd>
-                        </dl>
-                        <dl class="param param-feature">
-                            <dt>Artikelnummer</dt>
-                            <dd>12345611</dd>
-                        </dl>
-                        <dl class="param param-feature">
-                            <dt>antal/frp</dt>
-                            <dd>25</dd>
-                        </dl>
-                        <dl class="param param-feature">
-                            <dt>Enhetstyp</dt>
-                            <dd>PC</dd>
-                        </dl>
-                        <hr>
-                        <div>
-                            <a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
-                            <div class="">
-                                <form action="">
-                                    <input max="99" min="1" name="antal" type="number" value="1" />
-                                </form>
-                            </div>
-                        </div>
-                    </article>
-                </aside>
-            </div>
+    $("#productPresent").html("");
+    $("#productPresent").html(`
+    <div class="container-fluid callout-container">
+    <div class="row">
+        <div class="col-12">
+            <section class="callout jumbotron">
+                <h2 class="text-center">Inredning</h2>
+                <p class="text-center">Populära artiklar:</p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <figure class="card card-product">
+                                <button type="button" id="style-modal" data-toggle="modal" data-target="#dyckertModal">
+                                    <div class="img-wrap"><img src="assets/images/products/dyckertpistolhållare.jpg"></div>
+                                    <figcaption class="info-wrap">
+                                        <h4 class="title">dyckertpistolhållare</h4>
+                                        <p class="desc">Some small description goes here</p>
+                                    </figcaption>
+                                    <div class="rating-wrap">
+                                        <div class="label-rating">154 views </div>
+                                    </div> <!-- rating-wrap.// -->
+                                </button>
+                                <div class="bottom-wrap">
+                                    <a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
+                                    <div class="">
+                                        <form action="">
+                                            <input max="99" min="1" name="antal" type="number" value="1"/>
+                                        </form>
+                                    </div>
+                                </div> <!-- bottom-wrap.// -->
+                            </figure>
+                        </div> <!-- col // -->
+    
+                        <div class="col-md-3">
+                            <figure class="card card-product">
+                                <button type="button" id="style-modal" data-toggle="modal" data-target="#kvinfastModal">
+                                    <div class="img-wrap"><img src="assets/images/kvalificierad_infastning.jpg"> </div>
+                                    <figcaption class="info-wrap">
+                                        <h4 class="title">Kvalificierad infästning Broschyr</h4>
+                                        <p class="desc">Some small description goes here</p>
+                                    </figcaption>
+                                    <div class="rating-wrap">
+                                        <div class="label-rating">154 views </div>
+                                    </div> <!-- rating-wrap.// -->
+                                </button>
+                                <div class="bottom-wrap">
+                                    <a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
+                                    <div class="">
+                                        <form action="">
+                                            <input max="99" min="1" name="antal" type="number" value="1"/>
+                                        </form>
+                                    </div>
+                                </div> <!-- bottom-wrap.// -->
+                            </figure>
+                        </div> <!-- col // -->
+
+                        <div class="col-md-3">
+                            <figure class="card card-product">
+                                <button type="button" id="style-modal" data-toggle="modal" data-target="#tungInfastModal">
+                                    <div class="img-wrap"><img src="assets/images/tung_infastning.jpg"></div>
+                                    <figcaption class="info-wrap">
+                                        <h4 class="title">Tung Infästning Broschyr</h4>
+                                        <p class="desc">Some small description goes here</p>
+                                    </figcaption>
+                                    <div class="rating-wrap">
+                                        <div class="label-rating">154 views </div>
+                                    </div> <!-- rating-wrap.// -->
+                                </button>
+                                <div class="bottom-wrap">
+                                    <a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
+                                    <div class="">
+                                        <form action="">
+                                            <input max="99" min="1" name="antal" type="number" value="1"/>
+                                        </form>
+                                    </div>
+                                </div> <!-- bottom-wrap.// -->
+                            </figure>
+                        </div> <!-- col // -->
+
+                        <div class="col-md-3">
+                            <figure class="card card-product">
+                                <button type="button" id="style-modal" data-toggle="modal" data-target="#sortEttModal">
+                                    <div class="img-wrap"><img src="assets/images/nytt-sortiment-del1.jpg"></div>
+                                    <figcaption class="info-wrap">
+                                        <h4 class="title">Lim & Fog Guide del 1</h4>
+                                        <p class="desc">Some small description goes here</p>
+                                    </figcaption>
+                                    <div class="rating-wrap">
+                                        <div class="label-rating">154 views </div>
+                                    </div> <!-- rating-wrap.// -->
+                                </button>
+                                <div class="bottom-wrap">
+                                    <a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
+                                    <div class="">
+                                        <form action="">
+                                            <input max="99" min="1" name="antal" type="number" value="1"/>
+                                        </form>
+                                    </div>
+                                </div> <!-- bottom-wrap.// -->
+                            </figure>
+                        </div> <!-- col // -->
+                    </div> <!-- row.// -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="modal" id="dyckertModal" tabindex="-1" role="dialog" aria-labelledby="dyckertModallabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+              <div class="modal-content">
+              <iframe src="product-five.html" class="product-info" title="product-information"></iframe>
+              </div>
+        </div>
+      </div>
+      
+    <div class="modal" id="kvinfastModal" tabindex="-1" role="dialog" aria-labelledby="kvinfastModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+              <div class="modal-content">
+              <iframe src="product-two.html" class="product-info" title="product-information"></iframe>
+              </div>
+        </div>
+      </div>
+      
+    <div class="modal" id="tungInfastModal" tabindex="-1" role="dialog" aria-labelledby="tungInfastModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+              <div class="modal-content">
+              <iframe src="product-three.html" class="product-info" title="product-information"></iframe>
+              </div>
         </div>
     </div>
     
-    <div class="modal" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModallabel"
-		aria-hidden="true">
-		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<iframe src="../../product-one.html" class="product-info" title="product-information"></iframe>
-			</div>
-		</div>
-    </div>`
+    <div class="modal" id="sortEttModal" tabindex="-1" role="dialog" aria-labelledby="sortEttModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+              <div class="modal-content">
+              <iframe src="product-four.html" class="product-info" title="product-information"></iframe>
+              </div>
+        </div>
+      </div>
+</div>`
     );
 };

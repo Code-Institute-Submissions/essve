@@ -111,7 +111,7 @@
 .dropdown-submenu:hover>.dropdown-menu {
     display: block;
 }
-/*
+
 .dropdown-submenu>a:after {
     display: block;
     content: " ";
@@ -123,9 +123,9 @@
     border-width: 5px 0 5px 5px;
     border-left-color: #ccc;
     margin-top: 5px;
-    margin-right: -10px;
+    margin-right: 10px;
 }
-
+/*
 .dropdown-submenu.pull-left>.dropdown-menu {
     left: -100%;
     margin-left: 10px;

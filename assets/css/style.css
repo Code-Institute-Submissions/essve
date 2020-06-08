@@ -209,7 +209,7 @@ table{
     display: inline-block;
     background-color: white;
     min-height: 90vh;
-    width: 150vh;
+    width: 90vw;
 }
 
 .container-fluid{

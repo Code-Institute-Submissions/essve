@@ -29,44 +29,71 @@ if (!isset($_SESSION['loggedin'])) {
 <body>
 	<header class="container-fluid header">
 
-	    <nav class="navbar fixed-top navbar-dark navbar-expand-lg">
-	    	<a href="home.php" class="navbar-brand" target="_self">
+		<nav class="navbar fixed-top navbar-dark navbar-expand-lg">
+			<a href="home.php" class="navbar-brand" target="_self">
 				<img src="assets/images/essve-logo.jpg" class="img-fluid logo-header" alt="Webpage Logo - responsive image" href="home.php">
             </a>
 
-	    	<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span></button>
 
-	    	<div class="navbar-collapse collapse" id="navbarNavDropdown">
-				<ul class="navbar-nav mr-auto">
-    				<li class="nav-item mr-1 home margin-top"><a class="nav-link" href="home.php">Hem</a></li>
-					<li class="nav-item mr-2 margin-top dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Kategorier
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="inredning.html">Inredning</a>
-							<a class="dropdown-item" href="marknadsmatr.html">Marknadsmaterial</a>
-							<a class="dropdown-item" href="giveaway.html">Give away</a>
-							<a class="dropdown-item" href="kataloger.html">Kataloger/Broschyrer</a>
-						</div>
-					</li>
-			        <li class="nav-item mr-2 nav-link social-icon">
-						<span id="icons" onmouseleave="backToNormal()"><i class="fa fa-search" id="iconified" onmouseenter="searchBar()"></i></span>
-						<span><i class="fa fa-list-alt"></i></span>
-						
-						<button type="button" class="btn btn-link" data-toggle="modal" data-target="#profileModal">
+				<div class="navbar-collapse collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item mr-1 home margin-top"><a class="nav-link" href="home.php">Hem</a></li>
+						<li class="nav-item mr-2 margin-top dropdown">
+							<a id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" class="nav-link dropdown-toggle"
+								data-target="#" href="#" aria-haspopup="true" aria-expanded="false">
+								Kategorier
+							</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+								<li>
+									<a tabindex="-1" class="dropdown-item" href="inredning.html">inredning</a>
+								</li>
+                                <li class="dropdown-submenu">
+									<a tabindex="-1" class="dropdown-item" href="marknadsmatr.html">marknadsmaterial</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" tabindex="-1" href="#">pallsvep</a></li>
+										<li><a class="dropdown-item" tabindex="-1" href="#">skyltar</a></li>
+										<li><a class="dropdown-item" tabindex="-1" href="#">affischer</a></li>
+										<li><a class="dropdown-item" tabindex="-1" href="#">ställ</a></li>
+										<li><a class="dropdown-item" tabindex="-1" href="#">övrigt</a></li>
+									</ul>
+								</li>
+                                <li>
+									<a tabindex="-1" class="dropdown-item" href="forpackning.html">förpackningsmaterial</a>
+								</li>
+                                <li class="dropdown-submenu">
+									<a tabindex="-1" class="dropdown-item" href="kataloger.html">trycksaker</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" tabindex="-1" href="#">kataloger</a></li>
+										<li><a class="dropdown-item" tabindex="-1" href="#">broschyrer</a></li>
+									</ul>
+								</li>
+                                <li class="dropdown-submenu">
+									<a tabindex="-1" class="dropdown-item" href="giveaway.html">give-away</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" tabindex="-1" href="#">kläder</a></li>
+										<li><a class="dropdown-item" tabindex="-1" href="#">övrigt</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item mr-2 nav-link social-icon">
+							<span id="icons" onmouseleave="backToNormal()"><i class="fa fa-search" id="iconified" onmouseenter="searchBar()"></i></span>
+							<span><i class="fa fa-list-alt"></i></span>
+
+							<button type="button" class="btn btn-link" data-toggle="modal" data-target="#profileModal">
                             <span><i class="fa fa-user-circle-o"></i></span>
 						</button>
 
-			    	    <a href="logout.php"><span><i class="fa fa-sign-out"></i></span></a>
-			        </li>
-				</ul>		
-			</div>
+							<a href="logout.php"><span><i class="fa fa-sign-out"></i></span></a>
+						</li>
+					</ul>
+				</div>
 		</nav>
 
-		<div class="modal" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
+		<div class="modal" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel"
+			aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
 				<div class="modal-content">
 					<div class="modal-header">

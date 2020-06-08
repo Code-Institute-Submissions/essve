@@ -52,11 +52,11 @@ if (!isset($_SESSION['loggedin'])) {
                                 <li class="dropdown-submenu">
 									<a tabindex="-1" class="dropdown-item" href="marknadsmatr.html">marknadsmaterial</a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" tabindex="-1" href="#">pallsvep</a></li>
-										<li><a class="dropdown-item" tabindex="-1" href="#">skyltar</a></li>
-										<li><a class="dropdown-item" tabindex="-1" href="#">affischer</a></li>
-										<li><a class="dropdown-item" tabindex="-1" href="#">ställ</a></li>
-										<li><a class="dropdown-item" tabindex="-1" href="#">övrigt</a></li>
+										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">pallsvep</a></li>
+										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">skyltar</a></li>
+										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">affischer</a></li>
+										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">ställ</a></li>
+										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">övrigt</a></li>
 									</ul>
 								</li>
                                 <li>
@@ -65,15 +65,15 @@ if (!isset($_SESSION['loggedin'])) {
                                 <li class="dropdown-submenu">
 									<a tabindex="-1" class="dropdown-item" href="trycksaker.html">trycksaker</a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" tabindex="-1" href="#">kataloger</a></li>
-										<li><a class="dropdown-item" tabindex="-1" href="#">broschyrer</a></li>
+										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">kataloger</a></li>
+										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">broschyrer</a></li>
 									</ul>
 								</li>
                                 <li class="dropdown-submenu">
 									<a tabindex="-1" class="dropdown-item" href="giveaway.html">give-away</a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" tabindex="-1" href="#">kläder</a></li>
-										<li><a class="dropdown-item" tabindex="-1" href="#">övrigt</a></li>
+										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">kläder</a></li>
+										<li><a class="dropdown-item" tabindex="-1" href="product-overview.html">övrigt</a></li>
 									</ul>
 								</li>
                                 <li>

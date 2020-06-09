@@ -50,7 +50,7 @@ if (!isset($_SESSION['loggedin'])) {
 									<a class="dropdown-item" href="inredning.html">inredning</a>
 								</li>
                                 <li class="dropdown-submenu">
-									<a class="dropdown-item" href="product-overview.html" onclick="myFunction()">marknadsmaterial</a>
+									<a class="dropdown-item" id="marknadsmaterial" href="product-overview.html" onclick="storeChoice(this.id)">marknadsmaterial</a>
 									<ul class="dropdown-menu">
 										<li><a class="dropdown-item" href="product-overview.html">pallsvep</a></li>
 										<li><a class="dropdown-item" href="product-overview.html">skyltar</a></li>

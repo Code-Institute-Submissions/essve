@@ -1,4 +1,4 @@
-var choice;
+var choice = "";
 
 function searchBar() {
     $("#iconified").hide();
@@ -11,9 +11,8 @@ function backToNormal() {
     $("#iconified").show();
 };
 
-function storeChoice(clicked_id){
-    choice = clicked_id;
-    console.log(choice);
+function storeChoice(id){
+    choice = id;
 };
 
 function myFunction() {

@@ -1,4 +1,4 @@
-var choice = "";
+var choice;
 
 function searchBar() {
     $("#iconified").hide();
@@ -15,7 +15,8 @@ function storeChoice(id){
     choice = id;
 };
 
-function myFunction() {
+function showProducts() {
+
     $("#productPresent").html("");
     //var kategori = filtrera ut api-response så att det matchar var choice.
     //foreach ([i] in var kategori){ printa ut nedan html-kod}

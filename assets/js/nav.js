@@ -1,5 +1,3 @@
-var choice;
-
 function searchBar() {
     $("#iconified").hide();
     $("#icons").html(`<input type="text" name="search" class="form-control searching" placeholder="Sök.."></input>`);
@@ -11,12 +9,7 @@ function backToNormal() {
     $("#iconified").show();
 };
 
-function storeChoice(id){
-    choice = id;
-};
-
 function showProducts() {
-
     $("#productPresent").html("");
     //var kategori = filtrera ut api-response så att det matchar var choice.
     //foreach ([i] in var kategori){ printa ut nedan html-kod}

@@ -4,7 +4,7 @@ var filteredList;  //Stores the filtered list.
 function writeToDocument(id){ //The function begin called when the user makes a menu-choice.
   $("#productPresent").html("");
   choice = id;  //stores the id of the menu-choice made by user.
-  var apiResponse = getData(cb);  //Stores the api-response.
+  var apiResponse = getData();  //Stores the api-response.
   filteredList = [];    //empties the array.
 
   apiResponse.forEach(function(item) {  //for each item in the object apiResponse, do this function:

@@ -1,11 +1,13 @@
 var choice; //Stores the menu-choice made by the user
 
-function writeToDocument(id, cb){ //The function begin called when the user makes a menu-choice.
-  var element = document.getElementById("productPresent");
-  element.innerHTML = "";
-  var tableRows = [];
+function storeChoice(id){
+    choice = id;  //stores the id of the menu-choice made by user.
+};
 
-  choice = id;  //stores the id of the menu-choice made by user.
+function writeToDocument(){ //The function begin called when the user makes a menu-choice.
+  var element = document.getElementById("productPresent");
+  element.innerHTML = " ";
+  var tableRows = [];
 
   getData(function(data) {
     data = data.results;

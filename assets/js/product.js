@@ -4,18 +4,18 @@ function storeChoice(id){
     choice = id;  //stores the id of the menu-choice made by user.
 };
 
-function writeToDocument(){ //The function begin called when the user makes a menu-choice.
+function writeToDocument(cb){ //The function begin called when the user makes a menu-choice.
   var element = document.getElementById("productPresent");
   element.innerHTML = " ";
   var tableRows = [];
 
-  getData(function(data) {
-    data = data.results;
+  getData(function(cb) {
+    data = cb.Artiklar;
 
     data.forEach(function(item) {
       //el.innerHTML += "<p>" + item.name + "</p>";
       var dataRow = [];
-      Object.keys(item).forEach(function(key){
+      Object.keys(item).forEach(function(key, choice){
         if (item.kategori === choice){
           var truncatedData = item;
         }

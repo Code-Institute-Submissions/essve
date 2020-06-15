@@ -1,19 +1,28 @@
 var choice; //Stores the menu-choice made by the user
-var filteredList;  //Stores the filtered list.
 
-function writeToDocument(id){ //The function begin called when the user makes a menu-choice.
-  $("#productPresent").html("");
+function writeToDocument(id, cb){ //The function begin called when the user makes a menu-choice.
+  var element = document.getElementById("productPresent");
+  element.innerHTML = "";
+  var tableRows = [];
+
   choice = id;  //stores the id of the menu-choice made by user.
-  var apiResponse = getData();  //Stores the api-response.
-  filteredList = [];    //empties the array.
 
-  apiResponse.forEach(function(item) {  //for each item in the object apiResponse, do this function:
-      if (item.kategori === choice) {   //Check if the key kategori of object equals to the value of the variable choice and then do:
-        var rowData = this;  //Store the item in this variable.
-        filteredList.push(rowData);  //Push the above variable to the filteredList.
-      }
+  getData(function(data) {
+    data = data.results;
+
+    data.forEach(function(item) {
+      //el.innerHTML += "<p>" + item.name + "</p>";
+      var dataRow = [];
+      Object.keys(item).forEach(function(key){
+        if (item.kategori === choice){
+          var truncatedData = item;
+        }
+        dataRow.push(truncatedData);
+      });
+      tableRows.push(dataRow);
+    });
+    showData(tableRows);
   });
-  showData(filteredList);   //When above function has run, call the showData-function.
 };
 
 function getData(cb) {  //Creates the function getData
@@ -31,8 +40,8 @@ function getData(cb) {  //Creates the function getData
   req.send();
 };
 
-function showData(filteredList) {
-    $("#productPresent").html(`
+function showData(tableRows) {
+    element.innerHTML = `
     <div class="container-fluid callout-container">
         <div class="row">
             <div class="col-12">
@@ -44,10 +53,10 @@ function showData(filteredList) {
                             <div class="col-md-3">
                                 <figure class="card card-product">
                                     <button type="button" id="style-modal" data-toggle="modal" data-target="#productModal" onclick="storeChoice()">
-                                        <div class="img-wrap"><img src="${filteredList.bild-url}"></div>
+                                        <div class="img-wrap"><img src="${tableRows.bild-url}"></div>
                                         <figcaption class="info-wrap">
-                                            <h4 class="title">${filteredList.benamning}</h4>
-                                            <p class="desc">${filteredList.beskrivning}</p>
+                                            <h4 class="title">${tableRows.benamning}</h4>
+                                            <p class="desc">${tableRows.beskrivning}</p>
                                         </figcaption>
                                         <div class="rating-wrap">
                                             <div class="label-rating">154 views </div>
@@ -75,6 +84,5 @@ function showData(filteredList) {
                 </div>
             </div>
         </div>
-    </div>`
-    );
+    </div>`;
 };

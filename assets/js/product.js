@@ -41,8 +41,8 @@ function getData(cb) {  //Creates the function getData
 };
 
 function showData(tableRows) {
-    element.innerHTML = `
-    <div class="container-fluid callout-container">
+    tableRows.forEach(function(item, index){
+        document.getElementById("productPresent").innerHTML = `<div class="container-fluid callout-container">
         <div class="row">
             <div class="col-12">
                 <section class="callout jumbotron">
@@ -53,10 +53,10 @@ function showData(tableRows) {
                             <div class="col-md-3">
                                 <figure class="card card-product">
                                     <button type="button" id="style-modal" data-toggle="modal" data-target="#productModal" onclick="storeChoice()">
-                                        <div class="img-wrap"><img src="${tableRows.bild-url}"></div>
+                                        <div class="img-wrap"><img src="${item.bild-url}"></div>
                                         <figcaption class="info-wrap">
-                                            <h4 class="title">${tableRows.benamning}</h4>
-                                            <p class="desc">${tableRows.beskrivning}</p>
+                                            <h4 class="title">${item.benamning}</h4>
+                                            <p class="desc">${item.beskrivning}</p>
                                         </figcaption>
                                         <div class="rating-wrap">
                                             <div class="label-rating">154 views </div>
@@ -85,4 +85,5 @@ function showData(tableRows) {
             </div>
         </div>
     </div>`;
+    });
 };

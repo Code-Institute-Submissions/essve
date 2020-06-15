@@ -24,6 +24,7 @@ if (!isset($_SESSION['loggedin'])) {
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 	<link rel="stylesheet" href="assets/css/home.css" type="text/css" />
 	<script type="text/javascript" src="assets/js/nav.js"></script>
+	<script type="text/javascript" src="assets/js/product.js"></script>
 </head>
 
 <body>
@@ -50,7 +51,7 @@ if (!isset($_SESSION['loggedin'])) {
 									<a class="dropdown-item" href="inredning.html">inredning</a>
 								</li>
                                 <li class="dropdown-submenu">
-									<a class="dropdown-item" id="marknadsmaterial" href="product-overview.html" onclick="storeChoice(this.id)">marknadsmaterial</a>
+									<a class="dropdown-item" id="marknadsmaterial" href="product-overview.html" onclick="writeToDocument(this.id)">marknadsmaterial</a>
 									<ul class="dropdown-menu">
 										<li><a class="dropdown-item" href="product-overview.html">pallsvep</a></li>
 										<li><a class="dropdown-item" href="product-overview.html">skyltar</a></li>

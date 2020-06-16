@@ -4,13 +4,25 @@ function storeChoice(id){
 
 function writeToDocument(cb){ //The function begin called when the user makes a menu-choice.
   var element = document.getElementById("productPresent");
-  element.innerHTML = " ";
+  //element.innerHTML = "";
   var tableRows = [];
 
   getData(function(cb) {
     data = cb.Artiklar;
 
-    data.forEach(function(item) {
+    for (i = 0; i < data.lenght ; i++) {
+        var dataRow = [];
+        var choice = sessionStorage.getItem("menuChoice");
+
+        if (data[i].kategori === choice){
+          var truncatedData = data[i];
+          dataRow.push(truncatedData);
+        };
+      tableRows.push(dataRow);
+    }
+    showData(tableRows);
+/*
+    data.forEach(function(item, data) {
       //el.innerHTML += "<p>" + item.name + "</p>";
       var dataRow = [];
       var choice = sessionStorage.getItem("menuChoice");
@@ -22,6 +34,7 @@ function writeToDocument(cb){ //The function begin called when the user makes a 
       tableRows.push(dataRow);
     });
     showData(tableRows);
+    */
   });
 };
 
@@ -43,31 +56,31 @@ function getData(cb) {  //Creates the function getData
 function showData(tableRows) {
     tableRows.forEach(function(tableRows){
         document.getElementById("productPresent").innerHTML = `
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <figure class="card card-product">
-                                    <button type="button" id="style-modal" data-toggle="modal" data-target="#productModal" onclick="storeProductChoice()">
-                                        <div class="img-wrap"><img src="${tableRows.bildurl}"></div>
-                                        <figcaption class="info-wrap">
-                                            <h4 class="title">${tableRows.benamning}</h4>
-                                            <p class="desc">${tableRows.beskrivning}</p>
-                                        </figcaption>
-                                        <div class="rating-wrap">
-                                            <div class="label-rating">154 views </div>
-                                        </div>
-                                    </button>
-                                    <div class="bottom-wrap">
-                                        <a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
-                                        <div class="">
-                                            <form action="">
-                                                <input max="99" min="1" name="antal" type="number" value="1"/>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </figure>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <figure class="card card-product">
+                            <button type="button" id="style-modal" data-toggle="modal" data-target="#productModal" onclick="storeProductChoice()">
+                                <div class="img-wrap"><img src="${tableRows.bildurl}"></div>
+                                <figcaption class="info-wrap">
+                                    <h4 class="title">${tableRows.benamning}</h4>
+                                    <p class="desc">${tableRows.beskrivning}</p>
+                                </figcaption>
+                                <div class="rating-wrap">
+                                    <div class="label-rating">154 views </div>
+                                </div>
+                            </button>
+                            <div class="bottom-wrap">
+                                <a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
+                                <div class="">
+                                    <form action="">
+                                        <input max="99" min="1" name="antal" type="number" value="1"/>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
-                    </div>`;
+                        </figure>
+                    </div>
+                </div>
+            </div>`;
     });
 };

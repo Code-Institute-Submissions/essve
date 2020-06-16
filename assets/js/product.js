@@ -10,31 +10,16 @@ function writeToDocument(cb){ //The function begin called when the user makes a 
   getData(function(cb) {
     data = cb.Artiklar;
 
-    for (i = 0; i < data.lenght ; i++) {
-        var dataRow = [];
-        var choice = sessionStorage.getItem("menuChoice");
-
-        if (data[i].kategori === choice){
-          var truncatedData = data[i];
-          dataRow.push(truncatedData);
-        };
-      tableRows.push(dataRow);
-    }
-    showData(tableRows);
-/*
-    data.forEach(function(item, data) {
-      //el.innerHTML += "<p>" + item.name + "</p>";
+    for(var i = 0, len = data.length; i < len; i++) {
       var dataRow = [];
       var choice = sessionStorage.getItem("menuChoice");
 
-        if (item.kategori === choice){
-          var truncatedData = item;
-          dataRow.push(truncatedData);
-        };
+      if (data[i].kategori === choice) {
+        var truncatedData = data[i];
+        dataRow.push(truncatedData);
+      }
       tableRows.push(dataRow);
-    });
-    showData(tableRows);
-    */
+    }
   });
 };
 
@@ -54,17 +39,17 @@ function getData(cb) {  //Creates the function getData
 };
 
 function showData(tableRows) {
-    tableRows.forEach(function(tableRows){
-        document.getElementById("productPresent").innerHTML = `
-            <div class="container">
+  for(var i = 0, len = tableRows.length; i < len; i++){
+    document.getElementById("productPresent").innerHTML = `
+    <div class="container">
                 <div class="row">
                     <div class="col-md-3">
                         <figure class="card card-product">
                             <button type="button" id="style-modal" data-toggle="modal" data-target="#productModal" onclick="storeProductChoice()">
-                                <div class="img-wrap"><img src="${tableRows.bildurl}"></div>
+                                <div class="img-wrap"><img src="${tableRows[i].bildurl}"></div>
                                 <figcaption class="info-wrap">
-                                    <h4 class="title">${tableRows.benamning}</h4>
-                                    <p class="desc">${tableRows.beskrivning}</p>
+                                    <h4 class="title">${tableRows[i].benamning}</h4>
+                                    <p class="desc">${tableRows[i].beskrivning}</p>
                                 </figcaption>
                                 <div class="rating-wrap">
                                     <div class="label-rating">154 views </div>
@@ -82,5 +67,5 @@ function showData(tableRows) {
                     </div>
                 </div>
             </div>`;
-    });
+  }
 };

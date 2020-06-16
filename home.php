@@ -48,26 +48,26 @@ if (!isset($_SESSION['loggedin'])) {
 							</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
 								<li>
-									<a class="dropdown-item" href="inredning.html">inredning</a>
+									<a class="dropdown-item" id="inredning" href="product-overview.html" onclick="storeChoice(this.id)">inredning</a>
 								</li>
                                 <li class="dropdown-submenu">
 									<a class="dropdown-item" id="marknadsmaterial" href="product-overview.html" onclick="storeChoice(this.id)">marknadsmaterial</a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="product-overview.html">pallsvep</a></li>
-										<li><a class="dropdown-item" href="product-overview.html">skyltar</a></li>
-										<li><a class="dropdown-item" href="product-overview.html">affischer</a></li>
-										<li><a class="dropdown-item" href="product-overview.html">ställ</a></li>
-										<li><a class="dropdown-item" href="product-overview.html">övrigt</a></li>
+										<li><a class="dropdown-item" id="pallsvep" href="product-overview.html" onclick="storeChoice(this.id)">pallsvep</a></li>
+										<li><a class="dropdown-item" id="skyltar" href="product-overview.html" onclick="storeChoice(this.id)">skyltar</a></li>
+										<li><a class="dropdown-item" id="affischer" href="product-overview.html" onclick="storeChoice(this.id)">affischer</a></li>
+										<li><a class="dropdown-item" id="ställ" href="product-overview.html" onclick="storeChoice(this.id)">ställ</a></li>
+										<li><a class="dropdown-item" id="övrigt" href="product-overview.html" onclick="storeChoice(this.id)">övrigt</a></li>
 									</ul>
 								</li>
                                 <li>
-									<a class="dropdown-item" href="forpackning.html">förpackningsmaterial</a>
+									<a class="dropdown-item" id="forpackningsmaterial" href="product-overview.html" onclick="storeChoice(this.id)">förpackningsmaterial</a>
 								</li>
                                 <li class="dropdown-submenu">
-									<a class="dropdown-item" href="trycksaker.html">trycksaker</a>
+									<a class="dropdown-item" id="trycksaker" href="product-overview.html" onclick="storeChoice(this.id)">trycksaker</a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="product-overview.html">kataloger</a></li>
-										<li><a class="dropdown-item" href="product-overview.html">broschyrer</a></li>
+										<li><a class="dropdown-item" id="kataloger" href="product-overview.html" onclick="storeChoice(this.id)">kataloger</a></li>
+										<li><a class="dropdown-item" id="broschyrer" href="product-overview.html" onclick="storeChoice(this.id)">broschyrer</a></li>
 									</ul>
 								</li>
                                 <li class="dropdown-submenu">

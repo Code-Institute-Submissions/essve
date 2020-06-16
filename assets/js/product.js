@@ -1,5 +1,5 @@
 function storeChoice(id){
-    choice = id;  //stores the id of the menu-choice made by user.
+    sessionStorage.setItem("menuChoice", id);  //stores the id of the menu-choice made by user.
 };
 
 function writeToDocument(cb){ //The function begin called when the user makes a menu-choice.
@@ -13,12 +13,12 @@ function writeToDocument(cb){ //The function begin called when the user makes a 
     data.forEach(function(item) {
       //el.innerHTML += "<p>" + item.name + "</p>";
       var dataRow = [];
-      Object.keys(item).forEach(function(key, choice){
+      var choice = sessionStorage.getItem("menuChoice");
+
         if (item.kategori === choice){
           var truncatedData = item;
-        }
-        dataRow.push(truncatedData);
-      });
+          dataRow.push(truncatedData);
+        };
       tableRows.push(dataRow);
     });
     showData(tableRows);
@@ -41,22 +41,17 @@ function getData(cb) {  //Creates the function getData
 };
 
 function showData(tableRows) {
-    tableRows.forEach(function(item, index){
-        document.getElementById("productPresent").innerHTML = `<div class="container-fluid callout-container">
-        <div class="row">
-            <div class="col-12">
-                <section class="callout jumbotron">
-                    <h2 class="text-center">Inredning</h2>
-                    <p class="text-center">Populära artiklar:</p>
+    tableRows.forEach(function(tableRows){
+        document.getElementById("productPresent").innerHTML = `
                     <div class="container">
                         <div class="row">
                             <div class="col-md-3">
                                 <figure class="card card-product">
-                                    <button type="button" id="style-modal" data-toggle="modal" data-target="#productModal" onclick="storeChoice()">
-                                        <div class="img-wrap"><img src="${item.bild-url}"></div>
+                                    <button type="button" id="style-modal" data-toggle="modal" data-target="#productModal" onclick="storeProductChoice()">
+                                        <div class="img-wrap"><img src="${tableRows.bildurl}"></div>
                                         <figcaption class="info-wrap">
-                                            <h4 class="title">${item.benamning}</h4>
-                                            <p class="desc">${item.beskrivning}</p>
+                                            <h4 class="title">${tableRows.benamning}</h4>
+                                            <p class="desc">${tableRows.beskrivning}</p>
                                         </figcaption>
                                         <div class="rating-wrap">
                                             <div class="label-rating">154 views </div>
@@ -73,17 +68,6 @@ function showData(tableRows) {
                                 </figure>
                             </div>
                         </div>
-                    </div>
-                </section>
-            </div>
-        
-        <div class="modal" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModallabel" aria-hidden="true" onload="productLoad()">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <iframe src="product.html" class="product-info" title="product-information"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>`;
+                    </div>`;
     });
 };

@@ -1,5 +1,3 @@
-var choice; //Stores the menu-choice made by the user
-
 function storeChoice(id){
     choice = id;  //stores the id of the menu-choice made by user.
 };

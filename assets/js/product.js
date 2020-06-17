@@ -21,6 +21,7 @@ function writeToDocument(cb){ //The function begin called when the user makes a 
       tableRows.push(dataRow);
     }
   });
+  showData(tableRows);
 };
 
 function getData(cb) {  //Creates the function getData

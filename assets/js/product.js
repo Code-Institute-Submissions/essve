@@ -4,8 +4,6 @@ function storeChoice(id){
 }
 
 function writeToDocument(cb){ //The function begin called when the user makes a menu-choice.
-//var element = document.getElementById("productPresent");
-//element.innerHTML = "";
 
   var header = sessionStorage.getItem("menuChoice");
   $(".category-header").html(header);

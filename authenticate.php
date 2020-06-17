@@ -1,11 +1,11 @@
 <?php
 session_start();
-// Change this to your connection info.
+// This is my connection info:
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'Theelement';
 $DATABASE_PASS = 'Choklad654';
 $DATABASE_NAME = 'phplogin';
-// Try and connect using the info above.
+// Try and connect using the info above:
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if ( mysqli_connect_errno() ) {
 	// If there is an error with the connection, stop the script and display the error.

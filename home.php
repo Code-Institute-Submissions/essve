@@ -7,6 +7,7 @@ if (!isset($_SESSION['loggedin'])) {
 	exit;
 }
 ?>
+<!--ABOVE CODE IS NOT WRITTEN BY ME, SEE THE README.MD-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,38 +29,38 @@ if (!isset($_SESSION['loggedin'])) {
 </head>
 
 <body>
-	<header class="container-fluid header">
+	<header class="container-fluid header"> <!--header-container-->
 
-		<nav class="navbar fixed-top navbar-dark navbar-expand-lg">
-			<a href="home.php" class="navbar-brand" target="_self">
+		<nav class="navbar fixed-top navbar-dark navbar-expand-lg"> <!--navbar-->
+			<a href="home.php" class="navbar-brand" target="_self"> <!--header-logo-->
 				<img src="assets/images/essve-logo.jpg" class="img-fluid logo-header" alt="Webpage Logo - responsive image" href="home.php">
-            </a>
+            </a> <!--!header-logo-->
 
 				<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span></button>
+            <span class="navbar-toggler-icon"></span></button> <!--button displayed on small screens-->
 
-				<div class="navbar-collapse collapse" id="navbarNavDropdown">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item mr-1 home margin-top"><a class="nav-link" href="home.php">Hem</a></li>
-						<li class="nav-item mr-2 margin-top dropdown">
+				<div class="navbar-collapse collapse" id="navbarNavDropdown"> <!--the menu that's collapsed into the toggler above, on small screens-->
+					<ul class="navbar-nav mr-auto">	<!--menu list-->
+						<li class="nav-item mr-1 home margin-top"><a class="nav-link" href="home.php">Hem</a></li> <!--link/list-item within menu-->
+						<li class="nav-item mr-2 margin-top dropdown"> <!--categories dropdown menu-->
 							<a id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" class="nav-link dropdown-toggle"
 								data-target="#" href="#" aria-haspopup="true" aria-expanded="false">
 								Kategorier
 							</a>
-							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"> <!--the list of what's displayed within the category dropdown-->
 								<li>
 									<a class="dropdown-item" id="inredning" href="product-overview.html" onclick="storeChoice(this.id)">inredning</a>
 								</li>
-                                <li class="dropdown-submenu">
+                                <li class="dropdown-submenu"> <!--a list with subcategories/sub-menu-items-->
 									<a class="dropdown-item" id="marknadsmaterial" href="product-overview.html" onclick="storeChoice(this.id)">marknadsmaterial</a>
-									<ul class="dropdown-menu">
+									<ul class="dropdown-menu"> <!--the actual list-->
 										<li><a class="dropdown-item" id="pallsvep" href="product-overview.html" onclick="storeChoice(this.id)">pallsvep</a></li>
 										<li><a class="dropdown-item" id="skyltar" href="product-overview.html" onclick="storeChoice(this.id)">skyltar</a></li>
 										<li><a class="dropdown-item" id="affischer" href="product-overview.html" onclick="storeChoice(this.id)">affischer</a></li>
 										<li><a class="dropdown-item" id="ställ" href="product-overview.html" onclick="storeChoice(this.id)">ställ</a></li>
 										<li><a class="dropdown-item" id="övrigt" href="product-overview.html" onclick="storeChoice(this.id)">övrigt</a></li>
-									</ul>
-								</li>
+									</ul> <!--!the actual list-->
+								</li> <!--!a list with subcategories/sub-menu-items-->
                                 <li>
 									<a class="dropdown-item" id="forpackningsmaterial" href="product-overview.html" onclick="storeChoice(this.id)">förpackningsmaterial</a>
 								</li>
@@ -80,38 +81,38 @@ if (!isset($_SESSION['loggedin'])) {
                                 <li>
 									<a class="dropdown-item" href="ovrigt.html">övrigt</a>
 								</li>
-							</ul>
-						</li>
-						<li class="nav-item mr-2 nav-link social-icon">
-							<span id="icons" onmouseleave="backToNormal()"><i class="fa fa-search" id="iconified" onmouseenter="searchBar()"></i></span>
-							<span><i class="fa fa-list-alt"></i></span>
+							</ul> <!--!the list of what's displayed within the category dropdown-->
+						</li> <!--!categories dropdown menu-->
+						<li class="nav-item mr-2 nav-link social-icon"> <!--the icons in the menu-->
+							<span id="icons" onmouseleave="backToNormal()"><i class="fa fa-search" id="iconified" onmouseenter="searchBar()"></i></span> <!--the search icon/search bar-->
+							<span><i class="fa fa-list-alt"></i></span> <!--the list icon-->
 
-							<button type="button" class="btn btn-link" data-toggle="modal" data-target="#profileModal">
-                            <span><i class="fa fa-user-circle-o"></i></span>
-						</button>
+							<button type="button" class="btn btn-link" data-toggle="modal" data-target="#profileModal"> <!--the profile icon/button-->
+                            	<span><i class="fa fa-user-circle-o"></i></span>
+							</button> <!--!the profile icon/button-->
 
-							<a href="logout.php"><span><i class="fa fa-sign-out"></i></span></a>
-						</li>
-					</ul>
-				</div>
-		</nav>
+							<a href="logout.php"><span><i class="fa fa-sign-out"></i></span></a> <!--the logout icon/button-->
+						</li> <!--!the icons in the menu-->
+					</ul> <!--menu list-->
+				</div> <!--!the menu-->
+		</nav> <!--!navbar-->
 
 		<div class="modal" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel"
-			aria-hidden="true">
+			aria-hidden="true"> <!--the profile page modal-->
 			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
+				<div class="modal-content">	<!--the modal content-->
+					<div class="modal-header"> <!--the modal top content-->
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
 						<h2 class="text-center" id="profileModalLabel">Profile Page</h2>
 						<p class="text-center">Your account details are below:</p>
-					</div>
-					<div class="modal-body">
+					</div> <!--the modal top content-->
+					<div class="modal-body"> <!--the modal body content-->
 						<table>
 							<tr>
 								<td><strong>Username:</strong></td>
-								<td><?=$_SESSION['name']?></td>
+								<td><?=$_SESSION['name']?></td>	<!--gets the name from the mySQL-database-->
 							</tr>
 							<tr>
 								<td><strong>Password:</strong></td>
@@ -119,47 +120,47 @@ if (!isset($_SESSION['loggedin'])) {
 							</tr>
 							<tr>
 								<td><strong>Email:</strong></td>
-								<td><?=$email?></td>
+								<td><?=$email?></td> <!--gets the email from the mySQL-database-->
 							</tr>
 						</table>
-					</div>
-				</div>
+					</div> <!--the modal body content-->
+				</div> <!--!the modal content-->
 			</div>
-		</div>
-	</header>
+		</div> <!--!the profile page modal-->
+	</header> <!--!header-container-->
 
-	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"> <!--the carousel-->
   		<ol class="carousel-indicators">
     		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   		</ol>
-  		<div class="carousel-inner">
-    		<div class="carousel-item active">
+  		<div class="carousel-inner"> <!--the carousel wrap-->
+    		<div class="carousel-item active"> <!--carousel item-->
 				<img class="img-fluid d-block w-100" src="assets/images/slider/space4.jpg" alt="First slide">
-    		</div>
-    		<div class="carousel-item">
+    		</div> <!--!carousel item-->
+    		<div class="carousel-item"> <!--carousel item-->
       			<img class="img-fluid d-block w-100" src="assets/images/slider/space3.jpg" alt="Second slide">
-    		</div>
-    		<div class="carousel-item">
+    		</div> <!--!carousel item-->
+    		<div class="carousel-item"> <!--carousel item-->
       			<img class="img-fluid d-block w-100" src="assets/images/slider/space5.jpg" alt="Third slide">
-			</div>
-			<div class="carousel-caption">
+			</div> <!--!carousel item-->
+			<div class="carousel-caption"> <!--the transparent jumbotron-->
 				<section class="jumbotron search-jumbo text-center">
 					<p class="lead">Navigera med menyknapparna ovan, eller sök efter din produkt här:</p>
                 	<input type="text" name="search" class="form-control main-search" placeholder="Sök.."></input>
 				</section>
-			</div>
-  		</div>
-  		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			</div> <!--!the transparent jumbotron-->
+  		</div> <!--!the carousel wrap-->
+  		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <!--the carousel previous button-->
     		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
     		<span class="sr-only">Previous</span>
- 		</a>
-  		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+ 		</a> <!--!the carousel previous button-->
+  		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"> <!--the carousel next button-->
     		<span class="carousel-control-next-icon" aria-hidden="true"></span>
     		<span class="sr-only">Next</span>
-  		</a>
-	</div>
+  		</a> <!--!the carousel next button-->
+	</div> <!--!the carousel-->
 </body>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

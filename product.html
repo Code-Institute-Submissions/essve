@@ -15,19 +15,21 @@
     <link rel="stylesheet" href="assets/css/product.css" type="text/css" />
 </head>
 
+<!--I'VE ONLY BARELY STARTED WORKING ON THE STRUCTURE HERE. THE DATA WILL BE POPULATED DYNAMICALLY-->
+
 <body>
-    <div class="container padding-top">
+    <div class="container padding-top"> <!--product container wrap-->
         <div class="card">
             <div class="row">
                 <aside class="col-sm-5 padding-top">
-                    <article class="gallery-wrap">
-                        <div class="img-big-wrap">
+                    <article class="gallery-wrap"> <!--gallery wrap-->
+                        <div class="img-big-wrap"> <!--!image-wrap-->
                             <div> <a href="#"><img src="assets/images/products/ESS-Con.jpg"></a></div>
-                        </div> <!-- slider-product.// -->
-                    </article> <!-- gallery-wrap .end// -->
+                        </div> <!--!image wrap-->
+                    </article> <!--!gallery wrap-->
                 </aside>
                 <aside class="col-sm-7">
-                    <article class="card-body p-5">
+                    <article class="card-body p-5"> <!--product body-->
                         <h3 class="title mb-3">ESS-CON Broschyr</h3>
                         <dl class="item-property">
                             <dt>Beskrivning</dt>
@@ -40,33 +42,30 @@
                         <dl class="param param-feature">
                             <dt>Artikelnummer</dt>
                             <dd>12345611</dd>
-                        </dl> <!-- item-property-hor .// -->
+                        </dl>
                         <dl class="param param-feature">
                             <dt>antal/frp</dt>
                             <dd>25</dd>
-                        </dl> <!-- item-property-hor .// -->
+                        </dl>
                         <dl class="param param-feature">
                             <dt>Enhetstyp</dt>
                             <dd>PC</dd>
-                        </dl> <!-- item-property-hor .// -->
+                        </dl>
 
                         <hr>
                         <div>
-                            <a href="" class="btn btn-sm btn-success float-right">Lägg till</a>
-                            <div class="">
+                            <a href="" class="btn btn-sm btn-success float-right">Lägg till</a> <!--button for adding to shopping list-->
+                            <div class=""> <!--form to add amount-->
                                 <form action="">
                                     <input max="99" min="1" name="antal" type="number" value="1" />
                                 </form>
-                            </div>
+                            </div> <!--!form to add amount-->
                         </div>
-                    </article> <!-- card-body.// -->
-                </aside> <!-- col.// -->
-            </div> <!-- row.// -->
-        </div> <!-- card.// -->
-
-
-    </div>
-    <!--container.//-->
+                    </article> <!--!product body-->
+                </aside>
+            </div>
+        </div>
+    </div> <!--product container wrap-->
 </body>
 
 

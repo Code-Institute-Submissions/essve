@@ -17,49 +17,51 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container"> <!--container wrap-->
     	<div class="d-flex justify-content-center h-100">
-    		<div class="card">
-    			<div class="card-header">
+    		<div class="card"> <!--login card-->
+    			<div class="card-header"><!--upper part of login card-->
     				<h3>Logga in</h3>
-    				<div class="d-flex justify-content-end logo-icon">
+    				<div class="d-flex justify-content-end logo-icon"> <!--logo-icon-->
                         <img src="assets/images/essve-logo.jpg" class="essve-logo" alt="essve-logo">
-    				</div>
-    			</div>
-    			<div class="card-body">
-    				<form action="authenticate.php" method="post">
-    					<div class="input-group form-group">
+    				</div> <!--!logo-icon-->
+    			</div> <!--!upper part of login card-->
+    			<div class="card-body"> <!--middle part of login card-->
+    				<form action="authenticate.php" method="post"> <!--the form which calls on the php-file to authenticate the login-credentials-->
+    					<div class="input-group form-group"> <!--input form for username-->
     						<div class="input-group-prepend">
     							<span class="input-group-text"><i class="fa fa-user"></i></span>
     						</div>
     						<input type="text" name="username" id="username" class="form-control" placeholder="användarnamn" required>
-    
-    					</div>
-    					<div class="input-group form-group">
+						</div> <!--!input form for username-->
+						
+    					<div class="input-group form-group"> <!--input form for password-->
     						<div class="input-group-prepend">
     							<span class="input-group-text"><i class="fa fa-key"></i></span>
     						</div>
     						<input type="password" name="password" id="password" class="form-control" placeholder="lösenord" required>
-    					</div>
-    					<div class="row align-items-center remember">
+						</div> <!--!input form for password-->
+						
+    					<div class="row align-items-center remember"> <!--remember me checkbox-->
     						<input type="checkbox">Kom ihåg mig
-    					</div>
-    					<div class="form-group">
+    					</div> <!--!remember me checkbox-->
+    					<div class="form-group"> <!--submit-->
     						<input type="submit" value="Login" class="btn float-right login_btn">
-    					</div>
-    				</form>
-    			</div>
-    			<div class="card-footer">
-    				<div class="d-flex justify-content-center links">
+    					</div> <!--!submit-->
+					</form> <!--!the form-->
+				</div> <!--!middle part of login card-->
+				
+    			<div class="card-footer"> <!--lowest part of login card-->
+    				<div class="d-flex justify-content-center links"> <!--reference-->
     					<p>Har du ingen användare? <br> Kontakta din närmaste chef.</p>
-    				</div>
-    				<div class="d-flex justify-content-center">
+    				</div> <!--!reference-->
+    				<div class="d-flex justify-content-center"> <!--restore password-->
     					<a href="#">Har du glömt ditt lösenord?</a>
-    				</div>
-    			</div>
-    		</div>
+    				</div> <!--!restore password-->
+    			</div> <!--!lowest part of login card-->
+    		</div> <!--!login card-->
     	</div>
-    </div>
+    </div> <!--!container wrap-->
 </body>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

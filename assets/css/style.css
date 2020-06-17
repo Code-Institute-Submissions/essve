@@ -88,11 +88,6 @@
     margin-top: 3px;
 }
 
-.dropdown-toggle-split,
-.dropdown-toggle-split:hover{
-    color: rgba(255, 255, 255, 0.753);
-}
-
 /*submenu*/
 .dropdown-submenu {
     position: relative;
@@ -251,4 +246,5 @@ table{
     max-width: 140px;
     }
 }
+
 /* MEDIA END*/

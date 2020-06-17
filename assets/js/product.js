@@ -44,9 +44,7 @@ function showData(tableRows) {
     if (tableRows[i].length < 1){
       break;
     }else{
-      $(".productPresent").html(`
-        <div class="container">
-              <div class="row">
+      $(".productPresent").append(`
                   <div class="col-md-3">
                       <figure class="card card-product">
                           <button type="button" id="style-modal" data-toggle="modal" data-target="#productModal" onclick="storeProductChoice()">
@@ -68,9 +66,7 @@ function showData(tableRows) {
                               </div>
                           </div>
                       </figure>
-                  </div>
-              </div>
-          </div>`);
+                  </div>`);
     }
   }
 }

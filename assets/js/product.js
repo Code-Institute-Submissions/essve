@@ -1,4 +1,5 @@
 function storeChoice(id){
+  sessionStorage.clear();
   sessionStorage.setItem("menuChoice", id);  //stores the id of the menu-choice made by user.
 }
 

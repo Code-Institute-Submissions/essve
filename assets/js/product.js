@@ -12,14 +12,12 @@ var element = document.getElementById("productPresent");
     var tableRows = [];
 
     for(var i = 0, len = data.length; i < len; i++) {
-      var dataRow = [];
       var choice = sessionStorage.getItem("menuChoice");
 
       if (data[i].kategori === choice) {
         var truncatedData = data[i];
-        dataRow.push(truncatedData);
+        tableRows.push(truncatedData);
       }
-      tableRows.push(dataRow);
     }
     showData(tableRows);
   });
@@ -43,17 +41,14 @@ req.send();
 function showData(tableRows) {
   console.log(tableRows);
   for(var i = 0, len = tableRows.length; i < len; i++){
-    if (tableRows[i].length < 1){
-      break;
-    }else{
       $(".productPresent").append(`
                   <div class="col-md-3">
                       <figure class="card card-product">
                           <button type="button" id="style-modal" data-toggle="modal" data-target="#productModal" onclick="storeProductChoice()">
-                              <div class="img-wrap"><img src="${tableRows[i][0].bildurl}"></div>
+                              <div class="img-wrap"><img src="${tableRows[i].bildurl}"></div>
                               <figcaption class="info-wrap">
-                                  <h4 class="title">${tableRows[i][0].benamning}</h4>
-                                  <p class="desc">${tableRows[i][0].beskrivning}</p>
+                                  <h4 class="title">${tableRows[i].benamning}</h4>
+                                  <p class="desc">${tableRows[i].beskrivning}</p>
                               </figcaption>
                               <div class="rating-wrap">
                                   <div class="label-rating">154 views </div>
@@ -69,6 +64,5 @@ function showData(tableRows) {
                           </div>
                       </figure>
                   </div>`);
-    }
   }
 }

@@ -12,9 +12,6 @@
     border: 1px solid transparent;
     min-width: 200px;
     border-radius: 25rem;
-}
-
-.main-search{
     width: 130px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
@@ -48,9 +45,6 @@
     .search-jumbo{
         min-height: 0;
         width: 100%;
-    }
-    .social-icon{
-        max-width: 140px;
     }
 }
 

@@ -248,6 +248,7 @@ table{
 @media(max-width: 991px){
     .social-icon {
     margin-left: 0px;
+    max-width: 140px;
     }
 }
 /* MEDIA END*/

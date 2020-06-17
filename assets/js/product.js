@@ -33,7 +33,7 @@ function getData(cb) {  //Creates the function getData
     }
   };
 
-req.open("GET", "https://api.jsonbin.io/b/5ee9e99919b60f7aa95bec29", true);
+req.open("GET", "https://api.jsonbin.io/b/5ee9f65619b60f7aa95bf20e", true);
 req.setRequestHeader("secret-key", "$2b$10$Z9Ndh/N6Bl69HrvPtVtZkefAv525x8CvixBbgTCg04AgcnenwY.oa");
 req.send();
 }

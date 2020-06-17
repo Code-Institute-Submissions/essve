@@ -4,8 +4,11 @@ function storeChoice(id){
 }
 
 function writeToDocument(cb){ //The function begin called when the user makes a menu-choice.
-var element = document.getElementById("productPresent");
+//var element = document.getElementById("productPresent");
 //element.innerHTML = "";
+
+  var header = sessionStorage.getItem("menuChoice");
+  $(".category-header").html(header);
 
   getData(function(cb) {
     data = cb.artiklar;
@@ -45,7 +48,7 @@ function showData(tableRows) {
                   <div class="col-md-3">
                       <figure class="card card-product">
                           <button type="button" id="style-modal" data-toggle="modal" data-target="#productModal" onclick="storeProductChoice()">
-                              <div class="img-wrap"><img src="${tableRows[i].bildurl}"></div>
+                              <div class="img-wrap"><img src="${tableRows[i].bildUrl}"></div>
                               <figcaption class="info-wrap">
                                   <h4 class="title">${tableRows[i].benamning}</h4>
                                   <p class="desc">${tableRows[i].beskrivning}</p>

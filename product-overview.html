@@ -62,10 +62,10 @@
 									</ul>
 								</li>
                                 <li class="dropdown-submenu">
-									<a class="dropdown-item" href="giveaway.html">give-away</a>
+									<a class="dropdown-item" id="giveaway" href="product-overview.html" onclick="storeChoice(this.id)">give-away</a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="product-overview.html">kläder</a></li>
-										<li><a class="dropdown-item" href="product-overview.html">övrigt</a></li>
+										<li><a class="dropdown-item" id="kläder" href="product-overview.html" onclick="storeChoice(this.id)">kläder</a></li>
+										<li><a class="dropdown-item" id="övrigt" href="product-overview.html" onclick="storeChoice(this.id)">övrigt</a></li>
 									</ul>
 								</li>
                                 <li>
@@ -124,8 +124,7 @@
         	<div class="row">
         	    <div class="col-12">
         	        <section class="callout jumbotron">
-        	            <h2 class="text-center">Inredning</h2>
-						<p class="text-center">Populära artiklar:</p>
+        	            <h2 class="text-center category-header"></h2>
 						<div class="container">
 							<div class="row productPresent">
 							</div>

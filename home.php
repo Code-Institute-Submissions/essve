@@ -71,10 +71,10 @@ if (!isset($_SESSION['loggedin'])) {
 									</ul>
 								</li>
                                 <li class="dropdown-submenu">
-									<a class="dropdown-item" href="giveaway.html">give-away</a>
+									<a class="dropdown-item" id="giveaway" href="product-overview.html" onclick="storeChoice(this.id)">give-away</a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="product-overview.html">kläder</a></li>
-										<li><a class="dropdown-item" href="product-overview.html">övrigt</a></li>
+										<li><a class="dropdown-item" id="kläder" href="product-overview.html" onclick="storeChoice(this.id)"">kläder</a></li>
+										<li><a class="dropdown-item" id="övrigt" href="product-overview.html" onclick="storeChoice(this.id)">övrigt</a></li>
 									</ul>
 								</li>
                                 <li>

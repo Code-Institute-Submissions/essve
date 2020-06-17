@@ -7,7 +7,7 @@ var element = document.getElementById("productPresent");
 //element.innerHTML = "";
 
   getData(function(cb) {
-    data = cb.Artiklar;
+    data = cb.artiklar;
     var tableRows = [];
 
     for(var i = 0, len = data.length; i < len; i++) {
@@ -34,12 +34,13 @@ function getData(cb) {  //Creates the function getData
     }
   };
 
-req.open("GET", "https://api.jsonbin.io/b/5ee66c0619b60f7aa959f3c1", true);
+req.open("GET", "https://api.jsonbin.io/b/5ee9e99919b60f7aa95bec29", true);
 req.setRequestHeader("secret-key", "$2b$10$Z9Ndh/N6Bl69HrvPtVtZkefAv525x8CvixBbgTCg04AgcnenwY.oa");
 req.send();
 }
 
 function showData(tableRows) {
+  console.log(tableRows);
   for(var i = 0, len = tableRows.length; i < len; i++){
     if (tableRows[i].length < 1){
       break;

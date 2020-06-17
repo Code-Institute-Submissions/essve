@@ -49,10 +49,10 @@ function showData(tableRows) {
                   <div class="col-md-3">
                       <figure class="card card-product">
                           <button type="button" id="style-modal" data-toggle="modal" data-target="#productModal" onclick="storeProductChoice()">
-                              <div class="img-wrap"><img src="${tableRows[i].bildurl}"></div>
+                              <div class="img-wrap"><img src="${tableRows[i][0].bildurl}"></div>
                               <figcaption class="info-wrap">
-                                  <h4 class="title">${tableRows[i].benamning}</h4>
-                                  <p class="desc">${tableRows[i].beskrivning}</p>
+                                  <h4 class="title">${tableRows[i][0].benamning}</h4>
+                                  <p class="desc">${tableRows[i][0].beskrivning}</p>
                               </figcaption>
                               <div class="rating-wrap">
                                   <div class="label-rating">154 views </div>

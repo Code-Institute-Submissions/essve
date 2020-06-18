@@ -1,6 +1,6 @@
 /*Search-jumbo on top of the carousel*/
 .search-jumbo{
-    background-color: rgb(10, 10,10, 0.5);
+    background-color: rgba(10, 10, 10, 0.5);
     color: #fafafa;
     min-height: 30vh;
     margin-bottom: 25%;

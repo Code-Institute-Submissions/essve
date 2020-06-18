@@ -47,7 +47,7 @@ if (!isset($_SESSION['loggedin'])) {
 								data-target="#" href="#" aria-haspopup="true" aria-expanded="false">
 								Kategorier
 							</a>
-							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"> <!--the list of what's displayed within the category dropdown-->
+							<ul class="dropdown-menu" role="menu"> <!--the list of what's displayed within the category dropdown-->
 								<li>
 									<a class="dropdown-item" id="inredning" href="product-overview.html" onclick="storeChoice(this.id)">inredning</a>
 								</li>
@@ -58,7 +58,7 @@ if (!isset($_SESSION['loggedin'])) {
 										<li><a class="dropdown-item" id="skyltar" href="product-overview.html" onclick="storeChoice(this.id)">skyltar</a></li>
 										<li><a class="dropdown-item" id="affischer" href="product-overview.html" onclick="storeChoice(this.id)">affischer</a></li>
 										<li><a class="dropdown-item" id="ställ" href="product-overview.html" onclick="storeChoice(this.id)">ställ</a></li>
-										<li><a class="dropdown-item" id="övrigt" href="product-overview.html" onclick="storeChoice(this.id)">övrigt</a></li>
+										<li><a class="dropdown-item" id="movrigt" href="product-overview.html" onclick="storeChoice(this.id)">övrigt</a></li>
 									</ul> <!--!the actual list-->
 								</li> <!--!a list with subcategories/sub-menu-items-->
                                 <li>
@@ -74,12 +74,12 @@ if (!isset($_SESSION['loggedin'])) {
                                 <li class="dropdown-submenu">
 									<a class="dropdown-item" id="giveaway" href="product-overview.html" onclick="storeChoice(this.id)">give-away</a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" id="kläder" href="product-overview.html" onclick="storeChoice(this.id)"">kläder</a></li>
-										<li><a class="dropdown-item" id="övrigt" href="product-overview.html" onclick="storeChoice(this.id)">övrigt</a></li>
+										<li><a class="dropdown-item" id="klader" href="product-overview.html" onclick="storeChoice(this.id)">kläder</a></li>
+										<li><a class="dropdown-item" id="ovrigt" href="product-overview.html" onclick="storeChoice(this.id)">övrigt</a></li>
 									</ul>
 								</li>
                                 <li>
-									<a class="dropdown-item" href="ovrigt.html">övrigt</a>
+									<a class="dropdown-item" id="kovrigt" href="product-overview.html">övrigt</a>
 								</li>
 							</ul> <!--!the list of what's displayed within the category dropdown-->
 						</li> <!--!categories dropdown menu-->
@@ -146,10 +146,10 @@ if (!isset($_SESSION['loggedin'])) {
       			<img class="img-fluid d-block w-100" src="assets/images/slider/space5.jpg" alt="Third slide">
 			</div> <!--!carousel item-->
 			<div class="carousel-caption"> <!--the transparent jumbotron-->
-				<section class="jumbotron search-jumbo text-center">
+				<div class="jumbotron search-jumbo text-center">
 					<p class="lead">Navigera med menyknapparna ovan, eller sök efter din produkt här:</p>
                 	<input type="text" name="search" class="form-control main-search" placeholder="Sök.."></input>
-				</section>
+				</div>
 			</div> <!--!the transparent jumbotron-->
   		</div> <!--!the carousel wrap-->
   		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <!--the carousel previous button-->

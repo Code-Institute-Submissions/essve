@@ -10,7 +10,7 @@ if (!isset($_SESSION['loggedin'])) {
 <!--ABOVE CODE IS NOT WRITTEN BY ME, SEE THE README.MD-->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
 	<title>Start Page</title>
 	<meta charset="UTF-8">

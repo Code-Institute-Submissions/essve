@@ -1,6 +1,3 @@
-https://bootsnipp.com/snippets/vl4R7
-https://codeshack.io/secure-login-system-php-mysql/
-
 ### Product management Tool for ESSVE
 
 Welcome to my Product management Tool for ESSVE,
@@ -23,9 +20,11 @@ It was clear to me that this is what I had to create once I got some knowledge o
 
 I started of making a list of all the futures that I needed, Which now is included although not all done.
 
-It was clear to me how the layout would look so I skipped over the wireframe-part, also concidering I needed to convince noone this was a good idea.
+It was clear to me how the layout would look so I skipped over the wireframe-part, also concidering I needed to convince none this was a good idea.
 
 I have focused on the overall functionallity before the layout so have indulgence, this is a (for me) huge and ongoing project.
+
+![Screenshot of a category-page](readme-images/category-overview.jpg)
 
 ## Features
 
@@ -34,11 +33,12 @@ I have focused on the overall functionallity before the layout so have indulgenc
 * Category filtering based on properties of the product. Managed by JavaScript.
 
 ### Future Features to be included:
-* A searchbar to search for products.
+* A working searchbar to search for products.
 * Product filters.
 * A nice profile page from where one can manage change of personal information.
 * The ability to create a shopping list by adding products from the site or product pages.
 * I'm hoping to be able to add the possability to generate product shelf labels as well.
+* I also need to add more functionality to the filtering of categories so that everything works properly. At this moment not all choices render content.
 
 ## Technologies Used
 
@@ -55,27 +55,30 @@ I have focused on the overall functionallity before the layout so have indulgenc
 ## Testing
 
 I've been running Quokka and prettier extensions on VS Code for troubleshooting and arranging code.
-Because it's not more code than I can manage myself I've been satisfied by running the validators JSHint, freeformater and css-validator. I've also used the debugger in Chrome to step through all lines of JavaScript Code.
+Because it's not more code than I can manage myself I've been satisfied by running the validators JSHint, freeformater and css-validator. I've also used the debugger in Chrome to step through all lines of the JavaScript Code.
 
 All testing has been done manually by me, except the validating. And I'm picky, so rest a sure I'll always do anything in my power to deliver a properlly working site.
 All testing is done sequential, and structured.
 
 ## Deployment
 
-I installed Apache2 tougheter with MySQL and PHP on a Raspberry Pi and setup DynDNS on my router. 
+I installed Apache2 tougheter with MySQL and PHP on a Raspberry Pi and setup DynDNS on my router. the page can be viewed on theelement.asuscomm.com/essve and the user credentials is test for username and password.
 
 ## Credits
 
 ### Content:
 
-* Code Institute projects 'Bootstrap Intro' and the 'UCD Resume' for some styling.
+* I've used Code Institute projects 'API-testing' and the 'UCD Resume' as referense for the JavaScript code.
+* I've used [Codeshack](https://codeshack.io/secure-login-system-php-mysql/) as a guide to setup the authentification. Most of the PHP is also from here.
+* I've also used [This bootsnipp](https://bootsnipp.com/snippets/vl4R7) and [This bootsnipp](https://bootsnipp.com/snippets/R5r9A) as referense when creating some of the content and layout.
 
 ### Media:
 
-* Code Institute project 'Bootstrap Intro' for the background of all pages.
+* [ESSVE](https://www.essve.se) for the pictures.
 
 ### Acknowledgements:
 
 * Code institue for giving me the knowledge I've recieved so far.
 * My mentor Mr. Sandeep Aggarwal for his insights.
 * All friends and acquaints for all the support.
+* My employeer ESSVE Sverige AB for supporting me and my project.

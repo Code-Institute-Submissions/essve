@@ -42,41 +42,27 @@ I have focused on the overall functionallity before the layout so have indulgenc
 
 ## Technologies Used
 
-* HTML5
-* CSS
-* JavaScript
-* PHP
-* JSONBin.io
-* MySQL
+* [HTML5](https://html.spec.whatwg.org/) - for content.
+* [CSS](https://www.w3.org/Style/CSS/) - for styling.
+* [JavaScript](https://www.javascript.com/) - for the logics.
+* [PHP](https://www.php.net/) - for the login authentification.
+* [JSONBin.io](https://jsonbin.io/) - for the database and the API.
+* [MySQL](https://www.mysql.com/) - the database for managing user credentials.
 * [Bootstrap](https://getbootstrap.com/) - for easy creating the overall layout and functions.
 * [Font Awesome](https://fontawesome.com/) - for inclusion of icons.
 * [Jquery](https://jquery.com/) - to simplify DOM manipulation.
 
 ## Testing
 
-I run my projects simultaneously as I write the code. This way I can make sure everything does what I expect it to do.
-I can do my tweaks and test them in realtime, as I write the code.
+I've been running Quokka and prettier extensions on VS Code for troubleshooting and arranging code.
+Because it's not more code than I can manage myself I've been satisfied by running the validators JSHint, freeformater and css-validator. I've also used the debugger in Chrome to step through all lines of JavaScript Code.
 
-When all is finished, I try out each function and subdomain individually. To make sure everything works as expected.
-
-During the initial testing there is always some minor issues that needs to be approached. For example I noticed that the header didn't shrink enough when the page was viewed on small screen devices so this was something I had to approach. Which has been corrected now.
-I also noticed that some styles I had previously added to some subtitles has not been displaying correctly but has also been fixed.
-At this stage hopefully all issues has been approached and solved.
-
-All testing is done manually by me, and I'm picky, so rest a sure I'll always do anything in my power to deliver a properlly working site.
-All testing is done sequential, and structured. Like when testing forms;
-
-1. I fill out the forms as one should and submit.
-2. I then check to see if everything ended up where it's supposed to go.
-3. I then check the error logs.
-4. I do this again but with failing details, like a non-working mailaddress. To see what happens and if anything can be done differntly.
-
-Lastly I always run a validator tool to validate the CSS and the HTML, to see that there aren't any obvious mistakes left.
+All testing has been done manually by me, except the validating. And I'm picky, so rest a sure I'll always do anything in my power to deliver a properlly working site.
+All testing is done sequential, and structured.
 
 ## Deployment
 
-I'm not sure on what information I should provide here concidering I've only regulary commited and pushed my work to GitHub, and thereafter,
-in the settings, deployed it as a Github page. As I usually do at this time.
+I installed Apache2 tougheter with MySQL and PHP on a Raspberry Pi and setup DynDNS on my router. 
 
 ## Credits
 

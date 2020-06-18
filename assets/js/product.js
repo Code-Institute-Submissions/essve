@@ -34,7 +34,7 @@ function getData(cb) {  //Creates the function getData
     }
   };
 
-req.open("GET", "https://api.jsonbin.io/b/5ee9f65619b60f7aa95bf20e", true); //Opens the connection.
+req.open("GET", "https://api.jsonbin.io/b/5eeb88a50e966a7aa36c1cdb", true); //Opens the connection.
 req.setRequestHeader("secret-key", "$2b$10$Z9Ndh/N6Bl69HrvPtVtZkefAv525x8CvixBbgTCg04AgcnenwY.oa"); //The key to access the api.
 req.send();
 }

@@ -75,11 +75,11 @@ if (!isset($_SESSION['loggedin'])) {
 									<a class="dropdown-item" id="giveaway" href="product-overview.html" onclick="storeChoice(this.id)">give-away</a>
 									<ul class="dropdown-menu">
 										<li><a class="dropdown-item" id="klader" href="product-overview.html" onclick="storeChoice(this.id)">kläder</a></li>
-										<li><a class="dropdown-item" id="ovrigt" href="product-overview.html" onclick="storeChoice(this.id)">övrigt</a></li>
+										<li><a class="dropdown-item" id="govrigt" href="product-overview.html" onclick="storeChoice(this.id)">övrigt</a></li>
 									</ul>
 								</li>
                                 <li>
-									<a class="dropdown-item" id="kovrigt" href="product-overview.html">övrigt</a>
+									<a class="dropdown-item" id="ovrigt" href="product-overview.html">övrigt</a>
 								</li>
 							</ul> <!--!the list of what's displayed within the category dropdown-->
 						</li> <!--!categories dropdown menu-->

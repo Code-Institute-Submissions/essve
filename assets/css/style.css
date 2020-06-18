@@ -37,12 +37,14 @@
     margin-left: 0!important;
 }
 
+/*The logo in the navbar*/
 .logo-header {
     margin: -14px;
     width: 6rem;
     padding-left: 15px;
 }
 
+/*The icons on the right in the navbar*/
 .social-icon{
     min-width: 118px;
     margin-right: 5rem!important;
@@ -60,11 +62,13 @@
     cursor: pointer;
 }
 
+/*The profile-page btn*/
 .btn{
     padding: 0;
     vertical-align: inherit;
 }
 
+/*The dropdown-menu*/
 .dropdown-menu{
     min-width: 15rem;
     background-color: #000000de;;
@@ -88,7 +92,7 @@
     margin-top: 3px;
 }
 
-/*submenu*/
+/*Dropdown submenu*/
 .dropdown-submenu {
     position: relative;
 }
@@ -168,7 +172,7 @@ html,body{
 
 /* PAGE BODY END*/
 
-/* MODAL */
+/* MODAL/ THE PROFILE PAGE */
 .modal-color{
     color: #000000;
 }
@@ -202,12 +206,6 @@ table{
     text-align: center;
 }
 
-@media(max-width: 768px) {
-    .jumbotron {
-        padding: 4rem 2rem;
-    }
-}
-
 /* MEDIA */
 /* aligns navitems to the right */
 @media (min-width: 991px) {
@@ -219,6 +217,7 @@ table{
     }
 }
 
+/*Adjusts navbar to smaller screens*/
 @media(max-width: 991px) {
     .margin-adjust {
         margin-top: 14px;
@@ -231,11 +230,20 @@ table{
     }
 }
 
+/*Adjusts the icons in the navbar, to smaller screens*/
 @media(max-width: 991px){
     .social-icon {
     margin-left: 0px;
     max-width: 140px;
     }
 }
+
+/*Adjusts the jumbotrons to smaller screens*/
+@media(max-width: 768px) {
+    .jumbotron {
+        padding: 4rem 2rem;
+    }
+}
+
 
 /* MEDIA END*/

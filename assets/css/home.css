@@ -1,3 +1,4 @@
+/*Search-jumbo on top of the carousel*/
 .search-jumbo{
     background-color: rgb(10, 10,10, 0.5);
     color: #fafafa;
@@ -17,6 +18,13 @@
     transition: width 0.4s ease-in-out;
 }
 
+/* When the input field gets focus, change its width to 80% */
+.main-search:focus{
+    width: 80%;
+    border-color: rgb(70, 185, 46);
+}
+
+/* Carousel */
 .carousel-item{
     height: 100vh!important;
 }
@@ -35,12 +43,7 @@
     bottom: auto;
 }
 
-/* When the input field gets focus, change its width to 100% */
-.main-search:focus{
-    width: 80%;
-    border-color: rgb(70, 185, 46);
-}
-
+/*Screen adjustments*/
 @media(max-width: 991px){
     .search-jumbo{
         min-height: 0;

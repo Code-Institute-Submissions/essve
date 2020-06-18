@@ -1,8 +1,10 @@
+/*Content*/
 .container{
     height: 100%;
     align-content: center;
 }
 
+/*The login card*/
 .card{
     height: 380px;
     margin-top: auto;
@@ -11,25 +13,11 @@
     background-color: rgba(0,0,0,0.5) !important;
 }
 
-.logo-icon span{
-    font-size: 60px;
-    margin-left: 10px;
-    color: rgb(70, 185, 46);
-}
-
-.logo-icon span:hover{
-    color: rgb(9, 77, 9);
-    cursor: pointer;
-}
-
+/*The logo*/
 .logo-icon{
     position: absolute;
     right: 40px;
     top: -40px;
-}
-
-.card-header h3{
-    color: white;
 }
 
 .essve-logo{
@@ -38,6 +26,12 @@
     width: 50%;
 }
 
+/*The card header*/
+.card-header h3{
+    color: white;
+}
+
+/*the form for adding credentials*/
 .input-group-prepend span{
     width: 50px;
     background-color: rgb(70, 185, 46);
@@ -50,6 +44,7 @@ input:focus{
     box-shadow: 0 0 0 0 !important;
 }
 
+/*the remember checkbox*/
 .remember{
     color: white;
 }
@@ -62,6 +57,7 @@ input:focus{
     margin-right: 5px;
 }
 
+/*Buttons and links*/
 .login_btn{
     color: black;
     background-color: rgb(70, 185, 46);
@@ -76,8 +72,4 @@ input:focus{
 .links{
     color: white;
     text-align: center;
-}
-
-.links a{
-    margin-left: 4px;
 }
